@@ -34,7 +34,9 @@ target 'NetworkPlatform' do
 	pod 'Alamofire'
 	pod 'RxAlamofire'
 	pod 'RxStarscream'
-	
+	pod 'RxRealm'
+	pod 'RealmSwift'
+	pod 'Realm'
   # Pods for NetworkPlatform
 
 end

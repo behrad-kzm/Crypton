@@ -75,6 +75,12 @@
 		134BC69A228E123100F74CBB /* AllCoinsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134BC699228E123100F74CBB /* AllCoinsUseCase.swift */; };
 		134BC69D228E125A00F74CBB /* AllCoinsNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134BC69C228E125A00F74CBB /* AllCoinsNetwork.swift */; };
 		134BC69F228E153600F74CBB /* Bundle+LoadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134BC69E228E153600F74CBB /* Bundle+LoadView.swift */; };
+		136A5442228EB9AD004C4CCA /* DomainConvertibleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136A5440228EB9AC004C4CCA /* DomainConvertibleType.swift */; };
+		136A5443228EB9AD004C4CCA /* RealmRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136A5441228EB9AD004C4CCA /* RealmRepresentable.swift */; };
+		136A5446228EB9E3004C4CCA /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136A5445228EB9E3004C4CCA /* Repository.swift */; };
+		136A544B228EBA2C004C4CCA /* Observable+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136A5449228EBA2C004C4CCA /* Observable+Ext.swift */; };
+		136A544C228EBA2C004C4CCA /* Realm+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136A544A228EBA2C004C4CCA /* Realm+Ext.swift */; };
+		136A544F228EBA50004C4CCA /* RunLoopThreadScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136A544E228EBA50004C4CCA /* RunLoopThreadScheduler.swift */; };
 		3704F5D757F4E028E8D29820 /* Pods_Crypton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8518DD00A78F597A5353EBC1 /* Pods_Crypton.framework */; };
 		CEBDE64D33E3D0F5E7D19C70 /* Pods_Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19017B82DC9D4936990EC3CB /* Pods_Domain.framework */; };
 /* End PBXBuildFile section */
@@ -180,6 +186,12 @@
 		134BC699228E123100F74CBB /* AllCoinsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCoinsUseCase.swift; sourceTree = "<group>"; };
 		134BC69C228E125A00F74CBB /* AllCoinsNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCoinsNetwork.swift; sourceTree = "<group>"; };
 		134BC69E228E153600F74CBB /* Bundle+LoadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+LoadView.swift"; sourceTree = "<group>"; };
+		136A5440228EB9AC004C4CCA /* DomainConvertibleType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DomainConvertibleType.swift; sourceTree = "<group>"; };
+		136A5441228EB9AD004C4CCA /* RealmRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmRepresentable.swift; sourceTree = "<group>"; };
+		136A5445228EB9E3004C4CCA /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		136A5449228EBA2C004C4CCA /* Observable+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+Ext.swift"; sourceTree = "<group>"; };
+		136A544A228EBA2C004C4CCA /* Realm+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Realm+Ext.swift"; sourceTree = "<group>"; };
+		136A544E228EBA50004C4CCA /* RunLoopThreadScheduler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunLoopThreadScheduler.swift; sourceTree = "<group>"; };
 		19017B82DC9D4936990EC3CB /* Pods_Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D99921F24DC6662F77F639C /* Pods-Domain.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Domain.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Domain/Pods-Domain.debug.xcconfig"; sourceTree = "<group>"; };
 		63B9775D30C866E314B4241A /* Pods-Domain.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Domain.release.xcconfig"; path = "Pods/Target Support Files/Pods-Domain/Pods-Domain.release.xcconfig"; sourceTree = "<group>"; };
@@ -260,6 +272,7 @@
 		13419863228D6A9F00FF9050 /* NetworkPlatform */ = {
 			isa = PBXGroup;
 			children = (
+				136A543C228EB97F004C4CCA /* Database */,
 				134198BC228DDA9D00FF9050 /* APIs */,
 				134198BE228DDABF00FF9050 /* Usecases */,
 				134198BD228DDAA600FF9050 /* Network */,
@@ -652,6 +665,75 @@
 			path = AllCoins;
 			sourceTree = "<group>";
 		};
+		136A543C228EB97F004C4CCA /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				136A543D228EB985004C4CCA /* Realm */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		136A543D228EB985004C4CCA /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				136A5447228EBA15004C4CCA /* Utils */,
+				136A5444228EB9D4004C4CCA /* Repository */,
+				136A543E228EB98B004C4CCA /* Entities */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
+		136A543E228EB98B004C4CCA /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				136A543F228EB992004C4CCA /* Convertion */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		136A543F228EB992004C4CCA /* Convertion */ = {
+			isa = PBXGroup;
+			children = (
+				136A5440228EB9AC004C4CCA /* DomainConvertibleType.swift */,
+				136A5441228EB9AD004C4CCA /* RealmRepresentable.swift */,
+			);
+			path = Convertion;
+			sourceTree = "<group>";
+		};
+		136A5444228EB9D4004C4CCA /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				136A5445228EB9E3004C4CCA /* Repository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		136A5447228EBA15004C4CCA /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				136A544D228EBA46004C4CCA /* RxUnit */,
+				136A5448228EBA1F004C4CCA /* Extensions */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		136A5448228EBA1F004C4CCA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				136A5449228EBA2C004C4CCA /* Observable+Ext.swift */,
+				136A544A228EBA2C004C4CCA /* Realm+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		136A544D228EBA46004C4CCA /* RxUnit */ = {
+			isa = PBXGroup;
+			children = (
+				136A544E228EBA50004C4CCA /* RunLoopThreadScheduler.swift */,
+			);
+			path = RxUnit;
+			sourceTree = "<group>";
+		};
 		5076FFD57DCD1BC37739BCF7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -858,6 +940,9 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRealm/RxRealm.framework",
 				"${BUILT_PRODUCTS_DIR}/RxStarscream/RxStarscream.framework",
 				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
 			);
@@ -872,6 +957,9 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRealm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxStarscream.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
 			);
@@ -973,11 +1061,17 @@
 				134198CB228DDB1700FF9050 /* Network.swift in Sources */,
 				134198C5228DDAFC00FF9050 /* ResponseAnalytics.swift in Sources */,
 				134198D5228DDBF900FF9050 /* AuthenticationNetwork.swift in Sources */,
+				136A544B228EBA2C004C4CCA /* Observable+Ext.swift in Sources */,
 				134198C3228DDAFC00FF9050 /* DateFormatterExtension.swift in Sources */,
+				136A5442228EB9AD004C4CCA /* DomainConvertibleType.swift in Sources */,
+				136A544C228EBA2C004C4CCA /* Realm+Ext.swift in Sources */,
 				134198C4228DDAFC00FF9050 /* EncodableExtension.swift in Sources */,
+				136A5446228EB9E3004C4CCA /* Repository.swift in Sources */,
+				136A544F228EBA50004C4CCA /* RunLoopThreadScheduler.swift in Sources */,
 				134198CA228DDB1700FF9050 /* AuthorizationInfo.swift in Sources */,
 				134BC69D228E125A00F74CBB /* AllCoinsNetwork.swift in Sources */,
 				134198CC228DDB1700FF9050 /* NetworkProvider.swift in Sources */,
+				136A5443228EB9AD004C4CCA /* RealmRepresentable.swift in Sources */,
 				134198CF228DDBA300FF9050 /* UseCaseProvider.swift in Sources */,
 				134198D2228DDBC800FF9050 /* AuthorizationUseCase.swift in Sources */,
 			);
