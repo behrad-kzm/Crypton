@@ -81,6 +81,7 @@
 		136A544B228EBA2C004C4CCA /* Observable+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136A5449228EBA2C004C4CCA /* Observable+Ext.swift */; };
 		136A544C228EBA2C004C4CCA /* Realm+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136A544A228EBA2C004C4CCA /* Realm+Ext.swift */; };
 		136A544F228EBA50004C4CCA /* RunLoopThreadScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136A544E228EBA50004C4CCA /* RunLoopThreadScheduler.swift */; };
+		136A5451228ED87D004C4CCA /* RMSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136A5450228ED87D004C4CCA /* RMSymbol.swift */; };
 		3704F5D757F4E028E8D29820 /* Pods_Crypton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8518DD00A78F597A5353EBC1 /* Pods_Crypton.framework */; };
 		CEBDE64D33E3D0F5E7D19C70 /* Pods_Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19017B82DC9D4936990EC3CB /* Pods_Domain.framework */; };
 /* End PBXBuildFile section */
@@ -192,6 +193,7 @@
 		136A5449228EBA2C004C4CCA /* Observable+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+Ext.swift"; sourceTree = "<group>"; };
 		136A544A228EBA2C004C4CCA /* Realm+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Realm+Ext.swift"; sourceTree = "<group>"; };
 		136A544E228EBA50004C4CCA /* RunLoopThreadScheduler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunLoopThreadScheduler.swift; sourceTree = "<group>"; };
+		136A5450228ED87D004C4CCA /* RMSymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMSymbol.swift; sourceTree = "<group>"; };
 		19017B82DC9D4936990EC3CB /* Pods_Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D99921F24DC6662F77F639C /* Pods-Domain.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Domain.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Domain/Pods-Domain.debug.xcconfig"; sourceTree = "<group>"; };
 		63B9775D30C866E314B4241A /* Pods-Domain.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Domain.release.xcconfig"; path = "Pods/Target Support Files/Pods-Domain/Pods-Domain.release.xcconfig"; sourceTree = "<group>"; };
@@ -687,6 +689,7 @@
 			isa = PBXGroup;
 			children = (
 				136A543F228EB992004C4CCA /* Convertion */,
+				136A5450228ED87D004C4CCA /* RMSymbol.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -940,6 +943,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/QueryKit/QueryKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxRealm/RxRealm.framework",
@@ -957,6 +961,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QueryKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRealm.framework",
@@ -1061,6 +1066,7 @@
 				134198CB228DDB1700FF9050 /* Network.swift in Sources */,
 				134198C5228DDAFC00FF9050 /* ResponseAnalytics.swift in Sources */,
 				134198D5228DDBF900FF9050 /* AuthenticationNetwork.swift in Sources */,
+				136A5451228ED87D004C4CCA /* RMSymbol.swift in Sources */,
 				136A544B228EBA2C004C4CCA /* Observable+Ext.swift in Sources */,
 				134198C3228DDAFC00FF9050 /* DateFormatterExtension.swift in Sources */,
 				136A5442228EB9AD004C4CCA /* DomainConvertibleType.swift in Sources */,

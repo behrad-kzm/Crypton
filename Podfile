@@ -37,6 +37,7 @@ target 'NetworkPlatform' do
 	pod 'RxRealm'
 	pod 'RealmSwift'
 	pod 'Realm'
+	  pod 'QueryKit'
   # Pods for NetworkPlatform
 
 end

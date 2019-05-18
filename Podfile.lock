@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (4.8.2)
   - Differentiator (3.1.0)
+  - QueryKit (0.13.0)
   - ReachabilitySwift (4.3.1)
   - Realm (3.15.0):
     - Realm/Headers (= 3.15.0)
@@ -30,6 +31,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - QueryKit
   - ReachabilitySwift
   - Realm
   - RealmSwift
@@ -44,6 +46,7 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - Differentiator
+    - QueryKit
     - ReachabilitySwift
     - Realm
     - RealmSwift
@@ -58,6 +61,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   Differentiator: be49ca3408f0ecfc761e4c7763d20c62be01b9ad
+  QueryKit: 406c42b9b4eb5f8dab380a9e5bd9ef656542d1f4
   ReachabilitySwift: 4032e2f59586e11e3b0ebe15b167abdd587a388b
   Realm: 9b834e1be6062f544805252c812348872dc5d4ed
   RealmSwift: 8a41886f8ab6efef9eb8df97de2f2bb911561a79
@@ -69,6 +73,6 @@ SPEC CHECKSUMS:
   RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
   Starscream: 08172b481e145289c4930cb567230fb55897cfa4
 
-PODFILE CHECKSUM: 47cb4480b8d4490e2e2d0f8e8c48861df96919fe
+PODFILE CHECKSUM: 46340024f869f3c8c7f5b5f95c12b839ff114d37
 
 COCOAPODS: 1.5.3
