@@ -82,6 +82,19 @@
 		136A544C228EBA2C004C4CCA /* Realm+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136A544A228EBA2C004C4CCA /* Realm+Ext.swift */; };
 		136A544F228EBA50004C4CCA /* RunLoopThreadScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136A544E228EBA50004C4CCA /* RunLoopThreadScheduler.swift */; };
 		136A5451228ED87D004C4CCA /* RMSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136A5450228ED87D004C4CCA /* RMSymbol.swift */; };
+		13F97E6822DDBA9600BDC407 /* PositionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F97E6722DDBA9600BDC407 /* PositionManager.swift */; };
+		13F97E6A22DDBAE300BDC407 /* PositionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F97E6922DDBAE300BDC407 /* PositionModel.swift */; };
+		13F97E6C22DDBBC700BDC407 /* StopLossUpdateStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F97E6B22DDBBC700BDC407 /* StopLossUpdateStrategy.swift */; };
+		13F97E6E22DDBC1400BDC407 /* PositionUpdateStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F97E6D22DDBC1400BDC407 /* PositionUpdateStrategy.swift */; };
+		13F97E7422DDBD9700BDC407 /* OrderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F97E7322DDBD9700BDC407 /* OrderType.swift */; };
+		13F97E7622DDBE4A00BDC407 /* StopMarketOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F97E7522DDBE4A00BDC407 /* StopMarketOrder.swift */; };
+		13F97E7822DDC0AD00BDC407 /* StopLimitOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F97E7722DDC0AD00BDC407 /* StopLimitOrder.swift */; };
+		13F97E7A22DDC10500BDC407 /* CommonOrderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F97E7922DDC10500BDC407 /* CommonOrderProtocol.swift */; };
+		13F97E7C22DDDA4200BDC407 /* PositionManagerStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F97E7B22DDDA4200BDC407 /* PositionManagerStatus.swift */; };
+		13F97E7E22DDDB0100BDC407 /* OrderUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F97E7D22DDDB0100BDC407 /* OrderUsecase.swift */; };
+		13F97E8122DDE20A00BDC407 /* PositionUsecases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F97E8022DDE20A00BDC407 /* PositionUsecases.swift */; };
+		13F97E8322DDE30300BDC407 /* MarketUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F97E8222DDE30300BDC407 /* MarketUseCase.swift */; };
+		13F97E8522DDE37200BDC407 /* MarketPriceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F97E8422DDE37200BDC407 /* MarketPriceModel.swift */; };
 		3704F5D757F4E028E8D29820 /* Pods_Crypton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8518DD00A78F597A5353EBC1 /* Pods_Crypton.framework */; };
 		CEBDE64D33E3D0F5E7D19C70 /* Pods_Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19017B82DC9D4936990EC3CB /* Pods_Domain.framework */; };
 /* End PBXBuildFile section */
@@ -194,6 +207,19 @@
 		136A544A228EBA2C004C4CCA /* Realm+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Realm+Ext.swift"; sourceTree = "<group>"; };
 		136A544E228EBA50004C4CCA /* RunLoopThreadScheduler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunLoopThreadScheduler.swift; sourceTree = "<group>"; };
 		136A5450228ED87D004C4CCA /* RMSymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMSymbol.swift; sourceTree = "<group>"; };
+		13F97E6722DDBA9600BDC407 /* PositionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionManager.swift; sourceTree = "<group>"; };
+		13F97E6922DDBAE300BDC407 /* PositionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionModel.swift; sourceTree = "<group>"; };
+		13F97E6B22DDBBC700BDC407 /* StopLossUpdateStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopLossUpdateStrategy.swift; sourceTree = "<group>"; };
+		13F97E6D22DDBC1400BDC407 /* PositionUpdateStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionUpdateStrategy.swift; sourceTree = "<group>"; };
+		13F97E7322DDBD9700BDC407 /* OrderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderType.swift; sourceTree = "<group>"; };
+		13F97E7522DDBE4A00BDC407 /* StopMarketOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopMarketOrder.swift; sourceTree = "<group>"; };
+		13F97E7722DDC0AD00BDC407 /* StopLimitOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopLimitOrder.swift; sourceTree = "<group>"; };
+		13F97E7922DDC10500BDC407 /* CommonOrderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonOrderProtocol.swift; sourceTree = "<group>"; };
+		13F97E7B22DDDA4200BDC407 /* PositionManagerStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionManagerStatus.swift; sourceTree = "<group>"; };
+		13F97E7D22DDDB0100BDC407 /* OrderUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderUsecase.swift; sourceTree = "<group>"; };
+		13F97E8022DDE20A00BDC407 /* PositionUsecases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionUsecases.swift; sourceTree = "<group>"; };
+		13F97E8222DDE30300BDC407 /* MarketUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketUseCase.swift; sourceTree = "<group>"; };
+		13F97E8422DDE37200BDC407 /* MarketPriceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketPriceModel.swift; sourceTree = "<group>"; };
 		19017B82DC9D4936990EC3CB /* Pods_Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D99921F24DC6662F77F639C /* Pods-Domain.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Domain.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Domain/Pods-Domain.debug.xcconfig"; sourceTree = "<group>"; };
 		63B9775D30C866E314B4241A /* Pods-Domain.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Domain.release.xcconfig"; path = "Pods/Target Support Files/Pods-Domain/Pods-Domain.release.xcconfig"; sourceTree = "<group>"; };
@@ -489,6 +515,10 @@
 				134198E8228DDF4700FF9050 /* AuthenticationStatus.swift */,
 				134198E7228DDF4700FF9050 /* Constants.swift */,
 				134198E6228DDF4700FF9050 /* ErrorTypes.swift */,
+				13F97E6B22DDBBC700BDC407 /* StopLossUpdateStrategy.swift */,
+				13F97E6D22DDBC1400BDC407 /* PositionUpdateStrategy.swift */,
+				13F97E7322DDBD9700BDC407 /* OrderType.swift */,
+				13F97E7B22DDDA4200BDC407 /* PositionManagerStatus.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -496,6 +526,8 @@
 		134198D7228DDEA700FF9050 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				13F97E7022DDBCE800BDC407 /* Order */,
+				13F97E6622DDB9CE00BDC407 /* Position */,
 				134BC695228E111C00F74CBB /* Symbol */,
 				134BC692228E07BC00F74CBB /* ExchangeInfo */,
 				134BC663228E003F00F74CBB /* Coin */,
@@ -509,8 +541,10 @@
 			isa = PBXGroup;
 			children = (
 				134198D9228DDEBA00FF9050 /* UseCaseProvider.swift */,
+				13F97E6722DDBA9600BDC407 /* PositionManager.swift */,
 				134BC68F228E074D00F74CBB /* AllCoinsUsecase */,
 				134198DB228DDEC900FF9050 /* Authorization */,
+				13F97E7F22DDDB9000BDC407 /* OrderUseCase */,
 			);
 			path = Usecases;
 			sourceTree = "<group>";
@@ -529,6 +563,7 @@
 				134198E3228DDF2C00FF9050 /* GenericError.swift */,
 				134BC68A228E04E100F74CBB /* InteractiveModelType.swift */,
 				134198E2228DDF2C00FF9050 /* IdNameModel.swift */,
+				13F97E8422DDE37200BDC407 /* MarketPriceModel.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -735,6 +770,34 @@
 				136A544E228EBA50004C4CCA /* RunLoopThreadScheduler.swift */,
 			);
 			path = RxUnit;
+			sourceTree = "<group>";
+		};
+		13F97E6622DDB9CE00BDC407 /* Position */ = {
+			isa = PBXGroup;
+			children = (
+				13F97E6922DDBAE300BDC407 /* PositionModel.swift */,
+			);
+			path = Position;
+			sourceTree = "<group>";
+		};
+		13F97E7022DDBCE800BDC407 /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				13F97E7522DDBE4A00BDC407 /* StopMarketOrder.swift */,
+				13F97E7722DDC0AD00BDC407 /* StopLimitOrder.swift */,
+				13F97E7922DDC10500BDC407 /* CommonOrderProtocol.swift */,
+			);
+			path = Order;
+			sourceTree = "<group>";
+		};
+		13F97E7F22DDDB9000BDC407 /* OrderUseCase */ = {
+			isa = PBXGroup;
+			children = (
+				13F97E7D22DDDB0100BDC407 /* OrderUsecase.swift */,
+				13F97E8022DDE20A00BDC407 /* PositionUsecases.swift */,
+				13F97E8222DDE30300BDC407 /* MarketUseCase.swift */,
+			);
+			path = OrderUseCase;
 			sourceTree = "<group>";
 		};
 		5076FFD57DCD1BC37739BCF7 /* Pods */ = {
@@ -1091,15 +1154,28 @@
 				134198DA228DDEBA00FF9050 /* UseCaseProvider.swift in Sources */,
 				134BC691228E079000F74CBB /* AllCoinsUseCase.swift in Sources */,
 				134BC665228E009200F74CBB /* CoinDetail.swift in Sources */,
+				13F97E6C22DDBBC700BDC407 /* StopLossUpdateStrategy.swift in Sources */,
 				134198EB228DDF4700FF9050 /* AuthenticationStatus.swift in Sources */,
+				13F97E7C22DDDA4200BDC407 /* PositionManagerStatus.swift in Sources */,
+				13F97E8322DDE30300BDC407 /* MarketUseCase.swift in Sources */,
 				134BC697228E113300F74CBB /* Symbol.swift in Sources */,
 				134198E1228DDF0B00FF9050 /* TokenModel.swift in Sources */,
+				13F97E7822DDC0AD00BDC407 /* StopLimitOrder.swift in Sources */,
+				13F97E8122DDE20A00BDC407 /* PositionUsecases.swift in Sources */,
 				134198DD228DDED700FF9050 /* AuthorizationUseCase.swift in Sources */,
+				13F97E6E22DDBC1400BDC407 /* PositionUpdateStrategy.swift in Sources */,
+				13F97E7622DDBE4A00BDC407 /* StopMarketOrder.swift in Sources */,
+				13F97E6822DDBA9600BDC407 /* PositionManager.swift in Sources */,
 				134BC694228E108D00F74CBB /* ExchangeInfoNetworkModel.swift in Sources */,
 				134198E5228DDF2D00FF9050 /* GenericError.swift in Sources */,
 				134198EA228DDF4700FF9050 /* Constants.swift in Sources */,
+				13F97E7E22DDDB0100BDC407 /* OrderUsecase.swift in Sources */,
+				13F97E7422DDBD9700BDC407 /* OrderType.swift in Sources */,
+				13F97E6A22DDBAE300BDC407 /* PositionModel.swift in Sources */,
 				134198E9228DDF4700FF9050 /* ErrorTypes.swift in Sources */,
 				134198E4228DDF2D00FF9050 /* IdNameModel.swift in Sources */,
+				13F97E7A22DDC10500BDC407 /* CommonOrderProtocol.swift in Sources */,
+				13F97E8522DDE37200BDC407 /* MarketPriceModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
