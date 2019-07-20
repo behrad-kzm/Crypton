@@ -8,7 +8,7 @@
 
 import Foundation
 public struct StopMarketOrder: CommonOrderProtocol {
-	public var type: OrderType
+	public var type: OrderSide
 	
 	public var quantity: Int
 	

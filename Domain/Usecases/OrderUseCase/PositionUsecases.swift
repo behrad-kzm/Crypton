@@ -13,5 +13,5 @@ public protocol PositionUsecases {
 	func getPosition(symbol: String) -> Observable<PositionModel>
 	func close(position: PositionModel) -> Observable<Void>
 	func update(leverage: Double) -> Observable<Void>
-	
+
 }

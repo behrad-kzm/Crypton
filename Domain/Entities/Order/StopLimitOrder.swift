@@ -8,7 +8,7 @@
 
 import Foundation
 public struct StopLimitOrder: CommonOrderProtocol {
-	public var type: OrderType
+	public var type: OrderSide
 	
 	public var quantity: Int
 	

@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		0CAB20E168E1FAF4E6FD0DD2 /* Pods_NetworkPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F1E5FB9F705CAFF9AC17FAC /* Pods_NetworkPlatform.framework */; };
+		133435C722E3136A00F34553 /* PositionNetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133435C622E3136A00F34553 /* PositionNetworkModel.swift */; };
+		133435C922E3172200F34553 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133435C822E3172200F34553 /* Account.swift */; };
+		133435CB22E3275100F34553 /* AccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133435CA22E3275100F34553 /* AccountManager.swift */; };
+		133435CD22E32A3900F34553 /* BitmexCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133435CC22E32A3900F34553 /* BitmexCalculator.swift */; };
+		133435CF22E3482E00F34553 /* OrderNetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133435CE22E3482E00F34553 /* OrderNetworkModel.swift */; };
+		133435D122E34B7200F34553 /* BitmexOrderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133435D022E34B7200F34553 /* BitmexOrderType.swift */; };
 		13419853228D694300FF9050 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13419852228D694300FF9050 /* Assets.xcassets */; };
 		13419856228D694300FF9050 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13419854228D694300FF9050 /* LaunchScreen.storyboard */; };
 		13419866228D6A9F00FF9050 /* NetworkPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 13419864228D6A9F00FF9050 /* NetworkPlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -86,7 +92,7 @@
 		13F97E6A22DDBAE300BDC407 /* PositionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F97E6922DDBAE300BDC407 /* PositionModel.swift */; };
 		13F97E6C22DDBBC700BDC407 /* StopLossUpdateStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F97E6B22DDBBC700BDC407 /* StopLossUpdateStrategy.swift */; };
 		13F97E6E22DDBC1400BDC407 /* PositionUpdateStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F97E6D22DDBC1400BDC407 /* PositionUpdateStrategy.swift */; };
-		13F97E7422DDBD9700BDC407 /* OrderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F97E7322DDBD9700BDC407 /* OrderType.swift */; };
+		13F97E7422DDBD9700BDC407 /* OrderSide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F97E7322DDBD9700BDC407 /* OrderSide.swift */; };
 		13F97E7622DDBE4A00BDC407 /* StopMarketOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F97E7522DDBE4A00BDC407 /* StopMarketOrder.swift */; };
 		13F97E7822DDC0AD00BDC407 /* StopLimitOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F97E7722DDC0AD00BDC407 /* StopLimitOrder.swift */; };
 		13F97E7A22DDC10500BDC407 /* CommonOrderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F97E7922DDC10500BDC407 /* CommonOrderProtocol.swift */; };
@@ -132,6 +138,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		133435C622E3136A00F34553 /* PositionNetworkModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PositionNetworkModel.swift; sourceTree = "<group>"; };
+		133435C822E3172200F34553 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		133435CA22E3275100F34553 /* AccountManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountManager.swift; sourceTree = "<group>"; };
+		133435CC22E32A3900F34553 /* BitmexCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitmexCalculator.swift; sourceTree = "<group>"; };
+		133435CE22E3482E00F34553 /* OrderNetworkModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderNetworkModel.swift; sourceTree = "<group>"; };
+		133435D022E34B7200F34553 /* BitmexOrderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitmexOrderType.swift; sourceTree = "<group>"; };
 		13419848228D694000FF9050 /* Crypton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crypton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13419852228D694300FF9050 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		13419855228D694300FF9050 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -211,7 +223,7 @@
 		13F97E6922DDBAE300BDC407 /* PositionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionModel.swift; sourceTree = "<group>"; };
 		13F97E6B22DDBBC700BDC407 /* StopLossUpdateStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopLossUpdateStrategy.swift; sourceTree = "<group>"; };
 		13F97E6D22DDBC1400BDC407 /* PositionUpdateStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionUpdateStrategy.swift; sourceTree = "<group>"; };
-		13F97E7322DDBD9700BDC407 /* OrderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderType.swift; sourceTree = "<group>"; };
+		13F97E7322DDBD9700BDC407 /* OrderSide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderSide.swift; sourceTree = "<group>"; };
 		13F97E7522DDBE4A00BDC407 /* StopMarketOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopMarketOrder.swift; sourceTree = "<group>"; };
 		13F97E7722DDC0AD00BDC407 /* StopLimitOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopLimitOrder.swift; sourceTree = "<group>"; };
 		13F97E7922DDC10500BDC407 /* CommonOrderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonOrderProtocol.swift; sourceTree = "<group>"; };
@@ -262,6 +274,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		133435C522E3134E00F34553 /* NetworkModels */ = {
+			isa = PBXGroup;
+			children = (
+				133435CE22E3482E00F34553 /* OrderNetworkModel.swift */,
+				133435C622E3136A00F34553 /* PositionNetworkModel.swift */,
+				133435D022E34B7200F34553 /* BitmexOrderType.swift */,
+			);
+			path = NetworkModels;
+			sourceTree = "<group>";
+		};
 		1341983F228D693F00FF9050 = {
 			isa = PBXGroup;
 			children = (
@@ -517,7 +539,7 @@
 				134198E6228DDF4700FF9050 /* ErrorTypes.swift */,
 				13F97E6B22DDBBC700BDC407 /* StopLossUpdateStrategy.swift */,
 				13F97E6D22DDBC1400BDC407 /* PositionUpdateStrategy.swift */,
-				13F97E7322DDBD9700BDC407 /* OrderType.swift */,
+				13F97E7322DDBD9700BDC407 /* OrderSide.swift */,
 				13F97E7B22DDDA4200BDC407 /* PositionManagerStatus.swift */,
 			);
 			path = Enums;
@@ -526,6 +548,7 @@
 		134198D7228DDEA700FF9050 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				133435C522E3134E00F34553 /* NetworkModels */,
 				13F97E7022DDBCE800BDC407 /* Order */,
 				13F97E6622DDB9CE00BDC407 /* Position */,
 				134BC695228E111C00F74CBB /* Symbol */,
@@ -545,6 +568,8 @@
 				134BC68F228E074D00F74CBB /* AllCoinsUsecase */,
 				134198DB228DDEC900FF9050 /* Authorization */,
 				13F97E7F22DDDB9000BDC407 /* OrderUseCase */,
+				133435CA22E3275100F34553 /* AccountManager.swift */,
+				133435CC22E32A3900F34553 /* BitmexCalculator.swift */,
 			);
 			path = Usecases;
 			sourceTree = "<group>";
@@ -572,6 +597,7 @@
 			isa = PBXGroup;
 			children = (
 				134198E0228DDF0B00FF9050 /* TokenModel.swift */,
+				133435C822E3172200F34553 /* Account.swift */,
 			);
 			path = Authorization;
 			sourceTree = "<group>";
@@ -1150,6 +1176,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				133435CD22E32A3900F34553 /* BitmexCalculator.swift in Sources */,
 				134BC68B228E04E100F74CBB /* InteractiveModelType.swift in Sources */,
 				134198DA228DDEBA00FF9050 /* UseCaseProvider.swift in Sources */,
 				134BC691228E079000F74CBB /* AllCoinsUseCase.swift in Sources */,
@@ -1158,23 +1185,28 @@
 				134198EB228DDF4700FF9050 /* AuthenticationStatus.swift in Sources */,
 				13F97E7C22DDDA4200BDC407 /* PositionManagerStatus.swift in Sources */,
 				13F97E8322DDE30300BDC407 /* MarketUseCase.swift in Sources */,
+				133435CF22E3482E00F34553 /* OrderNetworkModel.swift in Sources */,
 				134BC697228E113300F74CBB /* Symbol.swift in Sources */,
 				134198E1228DDF0B00FF9050 /* TokenModel.swift in Sources */,
 				13F97E7822DDC0AD00BDC407 /* StopLimitOrder.swift in Sources */,
 				13F97E8122DDE20A00BDC407 /* PositionUsecases.swift in Sources */,
 				134198DD228DDED700FF9050 /* AuthorizationUseCase.swift in Sources */,
+				133435C922E3172200F34553 /* Account.swift in Sources */,
 				13F97E6E22DDBC1400BDC407 /* PositionUpdateStrategy.swift in Sources */,
 				13F97E7622DDBE4A00BDC407 /* StopMarketOrder.swift in Sources */,
 				13F97E6822DDBA9600BDC407 /* PositionManager.swift in Sources */,
 				134BC694228E108D00F74CBB /* ExchangeInfoNetworkModel.swift in Sources */,
+				133435C722E3136A00F34553 /* PositionNetworkModel.swift in Sources */,
 				134198E5228DDF2D00FF9050 /* GenericError.swift in Sources */,
 				134198EA228DDF4700FF9050 /* Constants.swift in Sources */,
+				133435D122E34B7200F34553 /* BitmexOrderType.swift in Sources */,
 				13F97E7E22DDDB0100BDC407 /* OrderUsecase.swift in Sources */,
-				13F97E7422DDBD9700BDC407 /* OrderType.swift in Sources */,
+				13F97E7422DDBD9700BDC407 /* OrderSide.swift in Sources */,
 				13F97E6A22DDBAE300BDC407 /* PositionModel.swift in Sources */,
 				134198E9228DDF4700FF9050 /* ErrorTypes.swift in Sources */,
 				134198E4228DDF2D00FF9050 /* IdNameModel.swift in Sources */,
 				13F97E7A22DDC10500BDC407 /* CommonOrderProtocol.swift in Sources */,
+				133435CB22E3275100F34553 /* AccountManager.swift in Sources */,
 				13F97E8522DDE37200BDC407 /* MarketPriceModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

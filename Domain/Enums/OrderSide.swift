@@ -1,5 +1,5 @@
 //
-//  OrderType.swift
+//  OrderSide.swift
 //  Domain
 //
 //  Created by Behrad Kazemi on 7/16/19.
@@ -7,7 +7,7 @@
 //
 
 import Foundation
-public enum OrderType {
-	case long
-	case short
+public enum OrderSide: String {
+	case long = "Buy"
+	case short = "Sell"
 }

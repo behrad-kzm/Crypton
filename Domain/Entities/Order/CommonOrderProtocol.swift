@@ -8,9 +8,10 @@
 
 import Foundation
 public protocol CommonOrderProtocol {
-	var type: OrderType { get }
+	var type: OrderSide { get }
 	var quantity: Int { get }
 	var symbol: String { get }
 	var targetPrice: Double { get }
+	var orderID: String { get }
 	//TODO - OrderID
 }
