@@ -7,7 +7,15 @@
 //
 
 import Foundation
+import Domain
+import RxSwift
 final class ControlPanelViewModel {
 	//TODO
-	public let usecase: 
+	public let usecase: AuthorizationUseCase
+  init(useCase: AuthorizationUseCase) {
+    self.usecase = useCase
+  }
+  func doit() -> Observable<Void> {
+    return usecase.login()
+  }
 }

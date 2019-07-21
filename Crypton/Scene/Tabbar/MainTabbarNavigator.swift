@@ -22,8 +22,10 @@ class MainTabbarNavigator {
   
   func setup(withIndex index: Int = 0) {
     //Setting up landing quiz
-
-//		tabbarVC.viewControllers = []()
+    let controlPanelVC = ControlPanelViewController(nibName: "ControlPanelViewController", bundle: nil)
+    controlPanelVC.viewModel = ControlPanelViewModel(useCase: services.makeAuthorizationUseCase())
+   
+    tabbarVC.viewControllers = [controlPanelVC]
 		tabbarVC.selectedIndex = index
     navigationController.pushViewController(tabbarVC, animated: true)
     

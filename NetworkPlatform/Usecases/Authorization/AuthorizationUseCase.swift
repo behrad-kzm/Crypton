@@ -18,7 +18,7 @@ public final class AuthorizationUseCase: Domain.AuthorizationUseCase {
   }
   
 	public func login() -> Observable<Void> {
-		
+    return network.getToken(requestParameter: TokenModel.Request(refreshToken: "sdf")).map({ (ali) -> Void in})
 	}
 	
 }

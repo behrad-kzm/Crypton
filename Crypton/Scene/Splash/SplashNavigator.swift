@@ -26,8 +26,4 @@ class SplashNavigator {
 		let tabbar = UITabBarController()
 		MainTabbarNavigator(services: services, navigationController: navigationController, tabbar: tabbar).setup()
 	}
-    
-    func toOnboarding() {
-    }
-    
 }

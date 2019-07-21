@@ -19,7 +19,8 @@ public final class AuthenticationNetwork {
   
   public func getToken(requestParameter: TokenModel.Request) -> Observable<TokenModel.Response> {
 		
-    return network.getItem(<#T##path: String##String#>)
+    let res = network.getItem(Constants.EndPoints.userModel.rawValue)
+    return res.withLatestFrom(Observable<TokenModel.Response>.just(TokenModel.Response(AccessToken: "dool", refreshToken: "ads")))
   }
   
 }

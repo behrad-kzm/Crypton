@@ -7,14 +7,19 @@
 //
 
 import UIKit
-
+import RxSwift
 class ControlPanelViewController: UIViewController {
 	
 	@IBOutlet weak var authButton: UIButton!
 	var viewModel: ControlPanelViewModel!
+  let disposeBag = DisposeBag()
     override func viewDidLoad() {
         super.viewDidLoad()
-
+      viewModel.doit().subscribe(onNext: { () in
+        print("fuck")
+      }, onError: { (error) in
+        print(error)
+      }).disposed(by: disposeBag)
 
     }
 

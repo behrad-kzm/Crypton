@@ -31,7 +31,6 @@
 		1341987B228D6AB700FF9050 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13419874228D6AB700FF9050 /* Domain.framework */; };
 		1341987C228D6AB700FF9050 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 13419874228D6AB700FF9050 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		13419881228D6ADE00FF9050 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13419874228D6AB700FF9050 /* Domain.framework */; };
-		13419884228DCE6000FF9050 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13419883228DCE6000FF9050 /* AppDelegate.swift */; };
 		13419886228DCEA200FF9050 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13419885228DCEA200FF9050 /* Application.swift */; };
 		1341988D228DCF7F00FF9050 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1341988C228DCF7F00FF9050 /* SplashViewModel.swift */; };
 		13419891228DCF8A00FF9050 /* SplashScreenController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1341988E228DCF8A00FF9050 /* SplashScreenController.xib */; };
@@ -57,7 +56,6 @@
 		134198C3228DDAFC00FF9050 /* DateFormatterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134198C0228DDAFC00FF9050 /* DateFormatterExtension.swift */; };
 		134198C4228DDAFC00FF9050 /* EncodableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134198C1228DDAFC00FF9050 /* EncodableExtension.swift */; };
 		134198C5228DDAFC00FF9050 /* ResponseAnalytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134198C2228DDAFC00FF9050 /* ResponseAnalytics.swift */; };
-		134198CA228DDB1700FF9050 /* AuthorizationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134198C6228DDB1700FF9050 /* AuthorizationInfo.swift */; };
 		134198CB228DDB1700FF9050 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134198C7228DDB1700FF9050 /* Network.swift */; };
 		134198CC228DDB1700FF9050 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134198C8228DDB1700FF9050 /* NetworkProvider.swift */; };
 		134198CF228DDBA300FF9050 /* UseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134198CE228DDBA300FF9050 /* UseCaseProvider.swift */; };
@@ -89,6 +87,7 @@
 		13F97E8122DDE20A00BDC407 /* PositionUsecases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F97E8022DDE20A00BDC407 /* PositionUsecases.swift */; };
 		13F97E8322DDE30300BDC407 /* MarketUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F97E8222DDE30300BDC407 /* MarketUseCase.swift */; };
 		13F97E8522DDE37200BDC407 /* MarketPriceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F97E8422DDE37200BDC407 /* MarketPriceModel.swift */; };
+		2567DFE622E4C04100E5E2BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2567DFE522E4C04100E5E2BC /* AppDelegate.swift */; };
 		3704F5D757F4E028E8D29820 /* Pods_Crypton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8518DD00A78F597A5353EBC1 /* Pods_Crypton.framework */; };
 		CEBDE64D33E3D0F5E7D19C70 /* Pods_Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19017B82DC9D4936990EC3CB /* Pods_Domain.framework */; };
 /* End PBXBuildFile section */
@@ -150,7 +149,6 @@
 		13419874228D6AB700FF9050 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		13419876228D6AB700FF9050 /* Domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Domain.h; sourceTree = "<group>"; };
 		13419877228D6AB700FF9050 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		13419883228DCE6000FF9050 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = "../../../barandeshow/barandeshow-ios/BarandehShow/Application/AppDelegate.swift"; sourceTree = "<group>"; };
 		13419885228DCEA200FF9050 /* Application.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		1341988C228DCF7F00FF9050 /* SplashViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 		1341988E228DCF8A00FF9050 /* SplashScreenController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SplashScreenController.xib; sourceTree = "<group>"; };
@@ -176,7 +174,6 @@
 		134198C0228DDAFC00FF9050 /* DateFormatterExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormatterExtension.swift; sourceTree = "<group>"; };
 		134198C1228DDAFC00FF9050 /* EncodableExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncodableExtension.swift; sourceTree = "<group>"; };
 		134198C2228DDAFC00FF9050 /* ResponseAnalytics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseAnalytics.swift; sourceTree = "<group>"; };
-		134198C6228DDB1700FF9050 /* AuthorizationInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationInfo.swift; sourceTree = "<group>"; };
 		134198C7228DDB1700FF9050 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		134198C8228DDB1700FF9050 /* NetworkProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
 		134198CE228DDBA300FF9050 /* UseCaseProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UseCaseProvider.swift; sourceTree = "<group>"; };
@@ -209,6 +206,7 @@
 		13F97E8222DDE30300BDC407 /* MarketUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketUseCase.swift; sourceTree = "<group>"; };
 		13F97E8422DDE37200BDC407 /* MarketPriceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketPriceModel.swift; sourceTree = "<group>"; };
 		19017B82DC9D4936990EC3CB /* Pods_Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2567DFE522E4C04100E5E2BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D99921F24DC6662F77F639C /* Pods-Domain.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Domain.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Domain/Pods-Domain.debug.xcconfig"; sourceTree = "<group>"; };
 		63B9775D30C866E314B4241A /* Pods-Domain.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Domain.release.xcconfig"; path = "Pods/Target Support Files/Pods-Domain/Pods-Domain.release.xcconfig"; sourceTree = "<group>"; };
 		72177B59BE21FF030670432E /* Pods-NetworkPlatform.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkPlatform.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NetworkPlatform/Pods-NetworkPlatform.debug.xcconfig"; sourceTree = "<group>"; };
@@ -352,7 +350,7 @@
 			isa = PBXGroup;
 			children = (
 				13419885228DCEA200FF9050 /* Application.swift */,
-				13419883228DCE6000FF9050 /* AppDelegate.swift */,
+				2567DFE522E4C04100E5E2BC /* AppDelegate.swift */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -480,7 +478,6 @@
 		134198BD228DDAA600FF9050 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				134198C6228DDB1700FF9050 /* AuthorizationInfo.swift */,
 				134198C7228DDB1700FF9050 /* Network.swift */,
 				134198C8228DDB1700FF9050 /* NetworkProvider.swift */,
 			);
@@ -859,7 +856,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Crypton/Pods-Crypton-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Crypton/Pods-Crypton-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
@@ -894,7 +891,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Crypton/Pods-Crypton-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Crypton/Pods-Crypton-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		56CD359AF83145F1B0B31DA8 /* [CP] Check Pods Manifest.lock */ = {
@@ -952,6 +949,7 @@
 				134198A5228DD82E00FF9050 /* Analytics.swift in Sources */,
 				1341988D228DCF7F00FF9050 /* SplashViewModel.swift in Sources */,
 				13419886228DCEA200FF9050 /* Application.swift in Sources */,
+				2567DFE622E4C04100E5E2BC /* AppDelegate.swift in Sources */,
 				13419892228DCF8A00FF9050 /* SplashNavigator.swift in Sources */,
 				1341989E228DD7FB00FF9050 /* UIView+RemoveSubviews.swift in Sources */,
 				134BC68E228E06AB00F74CBB /* ViewModelType.swift in Sources */,
@@ -960,7 +958,6 @@
 				134BC669228E01C400F74CBB /* MainTabbarNavigator.swift in Sources */,
 				134198AB228DD86600FF9050 /* Strings.swift in Sources */,
 				1341989C228DD7FB00FF9050 /* UIColor+Combine.swift in Sources */,
-				13419884228DCE6000FF9050 /* AppDelegate.swift in Sources */,
 				1341989D228DD7FB00FF9050 /* UIView+Shadow.swift in Sources */,
 				13419893228DCF8A00FF9050 /* SplashScreenController.swift in Sources */,
 				134198AA228DD86600FF9050 /* Appearance.swift in Sources */,
@@ -988,7 +985,6 @@
 				134198D5228DDBF900FF9050 /* AuthenticationNetwork.swift in Sources */,
 				134198C3228DDAFC00FF9050 /* DateFormatterExtension.swift in Sources */,
 				134198C4228DDAFC00FF9050 /* EncodableExtension.swift in Sources */,
-				134198CA228DDB1700FF9050 /* AuthorizationInfo.swift in Sources */,
 				133435D322E37B5E00F34553 /* AccountManager.swift in Sources */,
 				134198CC228DDB1700FF9050 /* NetworkProvider.swift in Sources */,
 				134198CF228DDBA300FF9050 /* UseCaseProvider.swift in Sources */,

@@ -28,7 +28,7 @@ final class Network<T: Decodable> {
 	
 	func getItems(_ path: String, itemId: String = "") -> Observable<[T]> {
 		let absolutePath = itemId == "" ? endPoint + path : endPoint + "\(path)/\(itemId)"
-		let expires = Date().timeIntervalSince1970 + 200
+		let expires = Int(Date().timeIntervalSince1970) + 200
 		let signature = accountInfo.getSignature(method: "GET", path: path, data: "", expires: expires)
 		let customHeader = [
 			"api-expires" : String(expires),
@@ -56,14 +56,14 @@ final class Network<T: Decodable> {
 	func getItem(_ path: String, itemId: String = "") -> Observable<T> {
 		let absolutePath = itemId == "" ? endPoint + path : endPoint + "\(path)/\(itemId)"
 		
-		let expires = Date().timeIntervalSince1970 + 200
+		let expires = Int(Date().timeIntervalSince1970) + 200
 		let signature = accountInfo.getSignature(method: "GET", path: path, data: "", expires: expires)
 		let customHeader = [
 			"api-expires" : String(expires),
 			"api-key" : accountInfo.key,
 			"api-signature" : signature
 		]
-		
+
 		return RxAlamofire
 			.request(.get, absolutePath, headers: customHeader)
 			.debug()
@@ -83,9 +83,6 @@ final class Network<T: Decodable> {
 						print(String(bytes: json.1, encoding: .utf8) ?? "")
 						throw self.handle(error: err, data: json.1, StatusCode: json.0.statusCode)
 					}
-				}else if 401 == json.0.statusCode {
-					print("TOKEN EXPIRED")
-					AuthorizationInfo.shared.tokenExpirationHandler(response: json.0)
 				}
 				throw self.handle(data: json.1, StatusCode: json.0.statusCode)
 			})
@@ -100,7 +97,7 @@ final class Network<T: Decodable> {
 					stringData = String(data: jsonData, encoding: .utf8)!
 		}
 
-		let expires = Date().timeIntervalSince1970 + 200
+		let expires = Int(Date().timeIntervalSince1970) + 200
 		let signature = accountInfo.getSignature(method: "POST", path: path, data: stringData, expires: expires)
 		let customHeader = [
 			"api-expires" : String(expires),
@@ -132,7 +129,7 @@ final class Network<T: Decodable> {
 			stringData = String(data: jsonData, encoding: .utf8)!
 		}
 		
-		let expires = Date().timeIntervalSince1970 + 200
+		let expires = Int(Date().timeIntervalSince1970) + 200
 		let signature = accountInfo.getSignature(method: "PUT", path: path, data: stringData, expires: expires)
 		let customHeader = [
 			"api-expires" : String(expires),
@@ -165,7 +162,7 @@ final class Network<T: Decodable> {
 			stringData = String(data: jsonData, encoding: .utf8)!
 		}
 		
-		let expires = Date().timeIntervalSince1970 + 200
+		let expires = Int(Date().timeIntervalSince1970) + 200
 		let signature = accountInfo.getSignature(method: "PUT", path: path, data: stringData, expires: expires)
 		let customHeader = [
 			"api-expires" : String(expires),
