@@ -22,11 +22,8 @@ class MainTabbarNavigator {
   
   func setup(withIndex index: Int = 0) {
     //Setting up landing quiz
-    let allCoinsVM = AllCoinsViewModel(navigator: AllCoinsNavigator(services: services, navigationController: navigationController), useCase: services.makeAllCoinsUseCase())
-    let allCoinsVC = AllCoinsViewController(nibName: "AllCoinsViewController", bundle: nil)
-		allCoinsVC.viewModel = allCoinsVM
-		
-		tabbarVC.viewControllers = [allCoinsVC]
+
+//		tabbarVC.viewControllers = []()
 		tabbarVC.selectedIndex = index
     navigationController.pushViewController(tabbarVC, animated: true)
     

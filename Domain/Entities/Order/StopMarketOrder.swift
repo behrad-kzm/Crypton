@@ -8,10 +8,14 @@
 
 import Foundation
 public struct StopMarketOrder: CommonOrderProtocol {
+	
+	public let symbol: String
+	
 	public var type: OrderSide
 	
 	public var quantity: Int
 	
 	public let targetPrice: Double
 
+	public let orderID: String
 }

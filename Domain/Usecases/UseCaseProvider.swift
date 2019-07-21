@@ -12,6 +12,5 @@ public protocol UseCaseProvider {
 	
 	//MARK: - Get Token + Login
 	func makeAuthorizationUseCase() -> AuthorizationUseCase
-	//Scenes
-	func makeAllCoinsUseCase() -> AllCoinsUseCase
+
 }

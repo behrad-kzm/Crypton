@@ -20,7 +20,4 @@ public final class UseCaseProvider: Domain.UseCaseProvider {
     public func makeAuthorizationUseCase() -> Domain.AuthorizationUseCase {
         return AuthorizationUseCase(network: networkProvider.makeAuthorizationNetwork())
     }
-	public func makeAllCoinsUseCase() -> Domain.AllCoinsUseCase {
-		return AllCoinsUseCase(network: networkProvider.makeAllCoinsNetwork())
-	}
 }

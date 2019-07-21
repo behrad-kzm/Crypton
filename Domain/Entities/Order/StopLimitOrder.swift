@@ -8,6 +8,8 @@
 
 import Foundation
 public struct StopLimitOrder: CommonOrderProtocol {
+	public let  symbol: String
+	
 	public var type: OrderSide
 	
 	public var quantity: Int
@@ -15,4 +17,6 @@ public struct StopLimitOrder: CommonOrderProtocol {
 	public let targetPrice: Double
 	
 	public let triggerPrice: Double
+	
+	public let orderID: String
 }

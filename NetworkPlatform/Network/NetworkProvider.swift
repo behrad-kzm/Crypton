@@ -22,8 +22,4 @@ final class NetworkProvider {
 		return AuthenticationNetwork(network: network)
 	}
 	
-	public func makeAllCoinsNetwork() -> AllCoinsNetwork {
-		let network = Network<ExchangeInfoNetworkModel.Response>(apiEndpoint)
-		return AllCoinsNetwork(network: network)
-	}
 }
