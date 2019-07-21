@@ -17,7 +17,8 @@ public final class AuthorizationUseCase: Domain.AuthorizationUseCase {
     self.network = network
   }
   
-  public func getToken(requestParameter: TokenModel.Request) -> Observable<TokenModel.Response> {
-    return network.getToken(requestParameter: requestParameter)
-  }
+	public func login() -> Observable<Void> {
+		
+	}
+	
 }

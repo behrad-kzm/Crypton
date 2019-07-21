@@ -19,6 +19,9 @@
 		133435D922E38D2900F34553 /* Data+BytesArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133435D522E38D2900F34553 /* Data+BytesArray.swift */; };
 		133435DA22E38D2900F34553 /* String+BytesArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133435D622E38D2900F34553 /* String+BytesArray.swift */; };
 		133435DB22E38D2900F34553 /* EasyCrypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133435D722E38D2900F34553 /* EasyCrypt.swift */; };
+		133435E422E4546C00F34553 /* ControlPanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133435E222E4546C00F34553 /* ControlPanelViewController.swift */; };
+		133435E522E4546C00F34553 /* ControlPanelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 133435E322E4546C00F34553 /* ControlPanelViewController.xib */; };
+		133435E722E4563800F34553 /* ControlPanelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133435E622E4563800F34553 /* ControlPanelViewModel.swift */; };
 		13419853228D694300FF9050 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13419852228D694300FF9050 /* Assets.xcassets */; };
 		13419856228D694300FF9050 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13419854228D694300FF9050 /* LaunchScreen.storyboard */; };
 		13419866228D6A9F00FF9050 /* NetworkPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 13419864228D6A9F00FF9050 /* NetworkPlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -134,6 +137,9 @@
 		133435D522E38D2900F34553 /* Data+BytesArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+BytesArray.swift"; sourceTree = "<group>"; };
 		133435D622E38D2900F34553 /* String+BytesArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+BytesArray.swift"; sourceTree = "<group>"; };
 		133435D722E38D2900F34553 /* EasyCrypt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EasyCrypt.swift; sourceTree = "<group>"; };
+		133435E222E4546C00F34553 /* ControlPanelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlPanelViewController.swift; sourceTree = "<group>"; };
+		133435E322E4546C00F34553 /* ControlPanelViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ControlPanelViewController.xib; sourceTree = "<group>"; };
+		133435E622E4563800F34553 /* ControlPanelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlPanelViewModel.swift; sourceTree = "<group>"; };
 		13419848228D694000FF9050 /* Crypton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crypton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13419852228D694300FF9050 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		13419855228D694300FF9050 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -252,6 +258,24 @@
 				133435D022E34B7200F34553 /* BitmexOrderType.swift */,
 			);
 			path = NetworkModels;
+			sourceTree = "<group>";
+		};
+		133435DC22E453A000F34553 /* ControlPanel */ = {
+			isa = PBXGroup;
+			children = (
+				133435DD22E453B600F34553 /* VM */,
+				133435E222E4546C00F34553 /* ControlPanelViewController.swift */,
+				133435E322E4546C00F34553 /* ControlPanelViewController.xib */,
+			);
+			path = ControlPanel;
+			sourceTree = "<group>";
+		};
+		133435DD22E453B600F34553 /* VM */ = {
+			isa = PBXGroup;
+			children = (
+				133435E622E4563800F34553 /* ControlPanelViewModel.swift */,
+			);
+			path = VM;
 			sourceTree = "<group>";
 		};
 		1341983F228D693F00FF9050 = {
@@ -573,6 +597,7 @@
 		134BC666228E017700F74CBB /* Tabbar */ = {
 			isa = PBXGroup;
 			children = (
+				133435DC22E453A000F34553 /* ControlPanel */,
 				134BC668228E01C400F74CBB /* MainTabbarNavigator.swift */,
 			);
 			path = Tabbar;
@@ -783,6 +808,7 @@
 				13419856228D694300FF9050 /* LaunchScreen.storyboard in Resources */,
 				13419891228DCF8A00FF9050 /* SplashScreenController.xib in Resources */,
 				13419853228D694300FF9050 /* Assets.xcassets in Resources */,
+				133435E522E4546C00F34553 /* ControlPanelViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -942,8 +968,10 @@
 				134198A3228DD82E00FF9050 /* Vibrator.swift in Sources */,
 				134198BB228DDA7E00FF9050 /* ActivityIndicator.swift in Sources */,
 				134BC66C228E023100F74CBB /* MainNavigationController.swift in Sources */,
+				133435E422E4546C00F34553 /* ControlPanelViewController.swift in Sources */,
 				134198A4228DD82E00FF9050 /* String+CastToPersian.swift in Sources */,
 				134198B8228DDA7E00FF9050 /* Observable+Ext.swift in Sources */,
+				133435E722E4563800F34553 /* ControlPanelViewModel.swift in Sources */,
 				134198B0228DDA0E00FF9050 /* String+AttributedCast.swift in Sources */,
 				134BC69F228E153600F74CBB /* Bundle+LoadView.swift in Sources */,
 				134198AE228DD9F600FF9050 /* String+Validation.swift in Sources */,

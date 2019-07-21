@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ControlPanelViewController" customModule="Crypton" customModuleProvider="target">
+            <connections>
+                <outlet property="authButton" destination="Rjl-ZF-Kd5" id="7aa-v1-CHx"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="iel-3U-nQr">
+                    <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eyO-Ep-Vi1">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="745"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g0t-ai-xl3">
+                            <rect key="frame" x="0.0" y="753" width="414" height="99"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rjl-ZF-Kd5">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="65"/>
+                                    <color key="backgroundColor" red="0.26619845289999999" green="0.77823336060000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="65" id="Eia-9B-rRQ"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" weight="black" pointSize="18"/>
+                                    <state key="normal" title="Authenticate">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" red="0.26619845289999999" green="0.77823336060000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstItem="Rjl-ZF-Kd5" firstAttribute="top" secondItem="g0t-ai-xl3" secondAttribute="top" id="Ahd-yz-PF5"/>
+                                <constraint firstAttribute="trailing" secondItem="Rjl-ZF-Kd5" secondAttribute="trailing" id="c82-C4-hvL"/>
+                                <constraint firstItem="Rjl-ZF-Kd5" firstAttribute="leading" secondItem="g0t-ai-xl3" secondAttribute="leading" id="k3r-HD-eQn"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="iel-3U-nQr" secondAttribute="trailing" id="MRm-eo-5H2"/>
+                <constraint firstItem="iel-3U-nQr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ZLm-JB-eFX"/>
+                <constraint firstAttribute="bottom" secondItem="iel-3U-nQr" secondAttribute="bottom" id="k6N-WY-cLM"/>
+                <constraint firstItem="Rjl-ZF-Kd5" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="kwC-u3-Se6"/>
+                <constraint firstItem="iel-3U-nQr" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="xMD-lw-45V"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+</document>

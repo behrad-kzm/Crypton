@@ -35,7 +35,6 @@ final class Network<T: Decodable> {
 			"api-key" : accountInfo.key,
 			"api-signature" : signature
 		]
-		
 		return RxAlamofire
 			.request(.get, absolutePath, headers: customHeader)
 			.debug()
@@ -57,8 +56,16 @@ final class Network<T: Decodable> {
 	func getItem(_ path: String, itemId: String = "") -> Observable<T> {
 		let absolutePath = itemId == "" ? endPoint + path : endPoint + "\(path)/\(itemId)"
 		
+		let expires = Date().timeIntervalSince1970 + 200
+		let signature = accountInfo.getSignature(method: "GET", path: path, data: "", expires: expires)
+		let customHeader = [
+			"api-expires" : String(expires),
+			"api-key" : accountInfo.key,
+			"api-signature" : signature
+		]
+		
 		return RxAlamofire
-			.request(.get, absolutePath, headers: sharedHeaders)
+			.request(.get, absolutePath, headers: customHeader)
 			.debug()
 			.observeOn(scheduler)
 			.responseData()
@@ -88,8 +95,20 @@ final class Network<T: Decodable> {
 		let absolutePath = endPoint + path
 		print("POST: \non: \(absolutePath)\nparameters: \(parameters)")
 		
+		var stringData = ""
+		if let jsonData = try? JSONSerialization.data(withJSONObject: parameters, options: []) {
+					stringData = String(data: jsonData, encoding: .utf8)!
+		}
+
+		let expires = Date().timeIntervalSince1970 + 200
+		let signature = accountInfo.getSignature(method: "POST", path: path, data: stringData, expires: expires)
+		let customHeader = [
+			"api-expires" : String(expires),
+			"api-key" : accountInfo.key,
+			"api-signature" : signature
+		]
 		return RxAlamofire
-			.request(.post, absolutePath, parameters: parameters, encoding: JSONEncoding.default, headers: sharedHeaders)
+			.request(.post, absolutePath, parameters: parameters, encoding: JSONEncoding.default, headers: customHeader)
 			.debug()
 			.observeOn(scheduler)
 			.responseData()
@@ -108,9 +127,20 @@ final class Network<T: Decodable> {
 	func putItem(_ path: String, parameters: [String: Any]) -> Observable<T> {
 		let absolutePath = endPoint + path
 		print("PUT: \non: \(absolutePath)\nparameters: \(parameters)")
+		var stringData = ""
+		if let jsonData = try? JSONSerialization.data(withJSONObject: parameters, options: []) {
+			stringData = String(data: jsonData, encoding: .utf8)!
+		}
 		
+		let expires = Date().timeIntervalSince1970 + 200
+		let signature = accountInfo.getSignature(method: "PUT", path: path, data: stringData, expires: expires)
+		let customHeader = [
+			"api-expires" : String(expires),
+			"api-key" : accountInfo.key,
+			"api-signature" : signature
+		]
 		return RxAlamofire
-			.request(.put, absolutePath, parameters: parameters, encoding: JSONEncoding.default, headers: sharedHeaders)
+			.request(.put, absolutePath, parameters: parameters, encoding: JSONEncoding.default, headers: customHeader)
 			.debug()
 			.observeOn(scheduler)
 			.responseData()
@@ -129,6 +159,19 @@ final class Network<T: Decodable> {
 	
 	func postItems(_ path: String, parameters: [String: Any]) -> Observable<[T]> {
 		let absolutePath = endPoint + path
+		
+		var stringData = ""
+		if let jsonData = try? JSONSerialization.data(withJSONObject: parameters, options: []) {
+			stringData = String(data: jsonData, encoding: .utf8)!
+		}
+		
+		let expires = Date().timeIntervalSince1970 + 200
+		let signature = accountInfo.getSignature(method: "PUT", path: path, data: stringData, expires: expires)
+		let customHeader = [
+			"api-expires" : String(expires),
+			"api-key" : accountInfo.key,
+			"api-signature" : signature
+		]
 		return RxAlamofire
 			.request(.post, absolutePath, parameters: parameters, encoding: JSONEncoding.default, headers: sharedHeaders)
 			.debug()

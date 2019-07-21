@@ -18,7 +18,8 @@ public final class AuthenticationNetwork {
   }
   
   public func getToken(requestParameter: TokenModel.Request) -> Observable<TokenModel.Response> {
-    return network.putItem("", parameters:  requestParameter.dictionary!)
+		
+    return network.getItem(<#T##path: String##String#>)
   }
   
 }

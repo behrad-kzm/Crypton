@@ -10,5 +10,6 @@ import Foundation
 import RxSwift
 
 public protocol AuthorizationUseCase {
-  func getToken(requestParameter: TokenModel.Request) -> Observable<TokenModel.Response>
+  func login() -> Observable<Void>
+	
 }

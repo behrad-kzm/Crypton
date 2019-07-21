@@ -25,8 +25,8 @@ public enum Constants {
 	public enum EndPoints: String {
 		
 		//Main
-		case defaultBinanceBaseUrl = "https://api.binance.com/api/v1/"
-		
+		case defaultBinanceBaseUrl = "https://www.bitmex.com"
+		case userModel = "/api/v1/user"
 		case exchangeInfo = "exchangeInfo"
 	}
 }
