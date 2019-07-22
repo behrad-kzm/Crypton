@@ -14,6 +14,8 @@ target 'Crypton' do
 	rx_cocoa
 	rx_swift
 	pod 'RxDataSources', '~> 3.0'
+  	pod 'IQKeyboardManagerSwift'
+	pod 'SkyFloatingLabelTextField', '~> 3.0'
   # Pods for Crypton
 
 end
