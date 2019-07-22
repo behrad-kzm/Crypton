@@ -10,86 +10,27 @@ import UIKit
 
 enum Appearance {
 	private enum hub {
-		private static let boldFontName = { return " "}	//[TODO]type bold font name here
-		private static let regularFontName = { return " "} //[TODO]type regular font name here
+		private static let boldFontName = { return "" }	//[TODO]type bold font name here
+		private static let regularFontName = { return " " } //[TODO]type regular font name here
+		
 		enum fonts {
-			enum Bold {
-				static let title = { return UIFont(name: boldFontName(), size: 18)!}
-				static let subtitle = { return UIFont(name: boldFontName(), size: 14)!}
-				static let middle = { return UIFont(name: boldFontName(), size: 16)!}
-				static let header = { return UIFont(name: boldFontName(), size: 20)!}
-				static let caption = { return UIFont(name: boldFontName(), size: 12)!}
-			}
-			enum Regular {
-				static let title = { return UIFont(name: regularFontName(), size: 16)!}
-				static let caption = { return UIFont(name: regularFontName(), size: 14)!}
-			}
-			
-		}
-	}
-	enum colors {
-		
-		enum blue {
-			private static let boldFontName = { return " "}
+			static let symbol = { return UIFont.boldSystemFont(ofSize: 21) }
+			static let regular = { return UIFont.systemFont(ofSize: 21) }
+			static let bigProfitPercent = { return UIFont.systemFont(ofSize: 100, weight: .light) }
+			static let button = { return UIFont.systemFont(ofSize: 35, weight: .black) }
+			static let bigCurrentPrice = { return UIFont.systemFont(ofSize: 64, weight: .black) }
 		}
 		
-		enum brown {
-			private static let boldFontName = { return " "}
-		}
-		
-		enum red {
-			private static let boldFontName = { return " "}
-		}
-		
-		enum green {
-			private static let boldFontName = { return " "}
-		}
-		
-		enum gray {
-			private static let boldFontName = { return " "}
-		}
-		
-		enum orange {
-			private static let boldFontName = { return " "}
-		}
-		
-		enum yellow {
-			private static let boldFontName = { return " "}
-		}
-		
-	}
-	enum gradients {
-		enum blueTone {
-			private static let boldFontName = { return " "}
-		}
-		
-		enum greenTone {
-			private static let boldFontName = { return " "}
-		}
-		
-		enum orangeTone {
-			private static let boldFontName = { return " "}
-
-		}
 	}
 	
-	enum fonts {
-		struct buttons {
-			static let defaultValue = { return Appearance.hub.fonts.Bold.subtitle()}
-			static let small = { return Appearance.hub.fonts.Bold.caption()}
-			
-			
-		}
+	enum colors {
 		
-		struct labels {
-			static let defaultValue = { return Appearance.hub.fonts.Bold.subtitle()}
-			static let title = { return Appearance.hub.fonts.Bold.title()}
-			static let boldBig = { return Appearance.hub.fonts.Bold.header()}
-			static let details = { return Appearance.hub.fonts.Bold.caption()}
-			static let mid = { return Appearance.hub.fonts.Bold.middle()}
-			static let subtitle = { return Appearance.hub.fonts.Bold.subtitle()}
-			static let detailedInfo = { return Appearance.hub.fonts.Regular.title()}
-			static let description = { return Appearance.hub.fonts.Regular.caption()}
-		}
+		static let green = { return UIColor(hex: "#6DD400", alpha: 1)}
+		static let red = { return UIColor(hex: "#FF2D55", alpha: 1)}
+		static let yellow = { return UIColor(hex: "#F7B500", alpha: 1)}
+		static let purple = { return UIColor(hex: "#B620E0", alpha: 1)}
+		static let darkBackground = { return UIColor(hex: "#0D0D21", alpha: 1)}
+		static let white = { return UIColor(white: 0.9, alpha: 1)}
+		
 	}
 }

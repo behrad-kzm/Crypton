@@ -21,45 +21,35 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="iel-3U-nQr">
-                    <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g0t-ai-xl3">
+                    <rect key="frame" x="0.0" y="797" width="414" height="99"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eyO-Ep-Vi1">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="745"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g0t-ai-xl3">
-                            <rect key="frame" x="0.0" y="753" width="414" height="99"/>
-                            <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rjl-ZF-Kd5">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="65"/>
-                                    <color key="backgroundColor" red="0.26619845289999999" green="0.77823336060000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="65" id="Eia-9B-rRQ"/>
-                                    </constraints>
-                                    <fontDescription key="fontDescription" type="system" weight="black" pointSize="18"/>
-                                    <state key="normal" title="Authenticate">
-                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </state>
-                                </button>
-                            </subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rjl-ZF-Kd5">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="65"/>
                             <color key="backgroundColor" red="0.26619845289999999" green="0.77823336060000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
-                                <constraint firstItem="Rjl-ZF-Kd5" firstAttribute="top" secondItem="g0t-ai-xl3" secondAttribute="top" id="Ahd-yz-PF5"/>
-                                <constraint firstAttribute="trailing" secondItem="Rjl-ZF-Kd5" secondAttribute="trailing" id="c82-C4-hvL"/>
-                                <constraint firstItem="Rjl-ZF-Kd5" firstAttribute="leading" secondItem="g0t-ai-xl3" secondAttribute="leading" id="k3r-HD-eQn"/>
+                                <constraint firstAttribute="height" constant="65" id="Eia-9B-rRQ"/>
                             </constraints>
-                        </view>
+                            <fontDescription key="fontDescription" type="system" weight="black" pointSize="18"/>
+                            <state key="normal" title="End Positioning">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                        </button>
                     </subviews>
-                </stackView>
+                    <color key="backgroundColor" red="0.26619845289999999" green="0.77823336060000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="Rjl-ZF-Kd5" firstAttribute="top" secondItem="g0t-ai-xl3" secondAttribute="top" id="Ahd-yz-PF5"/>
+                        <constraint firstAttribute="trailing" secondItem="Rjl-ZF-Kd5" secondAttribute="trailing" id="c82-C4-hvL"/>
+                        <constraint firstItem="Rjl-ZF-Kd5" firstAttribute="leading" secondItem="g0t-ai-xl3" secondAttribute="leading" id="k3r-HD-eQn"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="iel-3U-nQr" secondAttribute="trailing" id="MRm-eo-5H2"/>
-                <constraint firstItem="iel-3U-nQr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ZLm-JB-eFX"/>
-                <constraint firstAttribute="bottom" secondItem="iel-3U-nQr" secondAttribute="bottom" id="k6N-WY-cLM"/>
-                <constraint firstItem="Rjl-ZF-Kd5" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="kwC-u3-Se6"/>
-                <constraint firstItem="iel-3U-nQr" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="xMD-lw-45V"/>
+                <constraint firstItem="g0t-ai-xl3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="6au-Fj-tsC"/>
+                <constraint firstItem="g0t-ai-xl3" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="J2z-F7-qaq"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Rjl-ZF-Kd5" secondAttribute="bottom" id="T0a-m8-0bD"/>
+                <constraint firstAttribute="bottom" secondItem="g0t-ai-xl3" secondAttribute="bottom" id="ckp-9W-WS3"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>
