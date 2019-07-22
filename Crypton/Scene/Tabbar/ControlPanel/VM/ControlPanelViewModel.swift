@@ -12,8 +12,10 @@ import RxSwift
 final class ControlPanelViewModel {
 	//TODO
 	public let usecase: AuthorizationUseCase
-  init(useCase: AuthorizationUseCase) {
+	private let navigator: ControlPanelNavigator
+	init(useCase: AuthorizationUseCase, navigator: ControlPanelNavigator) {
     self.usecase = useCase
+		self.navigator = navigator
   }
   func doit() -> Observable<Void> {
     return usecase.login()

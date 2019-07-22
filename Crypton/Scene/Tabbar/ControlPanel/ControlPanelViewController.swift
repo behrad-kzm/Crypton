@@ -60,23 +60,41 @@ class ControlPanelViewController: UIViewController {
 	
 	@IBOutlet weak var endPositionButton: UIButton!
 	var viewModel: ControlPanelViewModel!
-  let disposeBag = DisposeBag()
+	let disposeBag = DisposeBag()
 	
-    override func viewDidLoad() {
-        super.viewDidLoad()
-      viewModel.doit().subscribe(onNext: { () in
-        print("fuck")
-      }, onError: { (error) in
-        print(error)
-      }).disposed(by: disposeBag)
-
-    }
+	@IBOutlet weak var scrollView: UIScrollView!
+	@IBOutlet weak var endPositionContainer: UIView!
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		viewModel.doit().subscribe(onNext: { () in
+			print("fuck")
+		}, onError: { (error) in
+			print(error)
+		}).disposed(by: disposeBag)
+		
+	}
 	
 	func setupUI(){
-		[stopLossTitleLabel,sideTitleLabel,leverageTitleLabel,quantityTitleLabel,changeBTCTitleLabel,changeUSDTitleLabel,autoUpdateTitleLabel,currentBTCTitleLabel,currentUSDTitleLabel].forEach{
-			$0?.font = Appearance.hub.fonts.sectionTitle()
-			
+	view.backgroundColor = Appearance.colors.darkBackground()
+		[autoUpdateSwitch, autoReverseSwitch].forEach{
+			$0?.backgroundColor = Appearance.colors.purple()
 		}
+		scrollView.contentInset = view.safeAreaInsets
+		symbolLabel.font = Appearance.hub.fonts.symbol()
+		currentPrice.font = Appearance.hub.fonts.bigCurrentPrice()
+		currentPriceDollarSignLabel.font = Appearance.hub.fonts.bigMedium()
+		currentProfitTitleLabel.font = Appearance.hub.fonts.sectionTitle()
+		currentProfitPercentLabel.font = Appearance.hub.fonts.bigProfitPercent()
+		endPositionContainer.backgroundColor = Appearance.colors.yellow()
+		endPositionButton.titleLabel?.font = Appearance.hub.fonts.button()
+		[sideLabel, quantityLabel, totalProfitLabel, changeBTCLabel, changeUSDLabel, currentBTCLabel, currentUSDLabel, stopLossLabel, leverageLabel].forEach{
+			$0?.font = Appearance.hub.fonts.regular()
+		}
+			[stopLossTitleLabel, sideTitleLabel, leverageTitleLabel, quantityTitleLabel, changeBTCTitleLabel, changeUSDTitleLabel, autoUpdateTitleLabel, currentBTCTitleLabel, currentUSDTitleLabel,autoReverseTitleLabel].forEach{
+			$0?.font = Appearance.hub.fonts.regular()
+			$0?.textColor = Appearance.colors.white()
+		}
+		
 	}
-
+	
 }

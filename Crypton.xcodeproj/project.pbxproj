@@ -22,6 +22,7 @@
 		133435E422E4546C00F34553 /* ControlPanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133435E222E4546C00F34553 /* ControlPanelViewController.swift */; };
 		133435E522E4546C00F34553 /* ControlPanelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 133435E322E4546C00F34553 /* ControlPanelViewController.xib */; };
 		133435E722E4563800F34553 /* ControlPanelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133435E622E4563800F34553 /* ControlPanelViewModel.swift */; };
+		1338E34922E6251E008ED63C /* ControlPanelNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1338E34822E6251E008ED63C /* ControlPanelNavigator.swift */; };
 		13419853228D694300FF9050 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13419852228D694300FF9050 /* Assets.xcassets */; };
 		13419856228D694300FF9050 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13419854228D694300FF9050 /* LaunchScreen.storyboard */; };
 		13419866228D6A9F00FF9050 /* NetworkPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 13419864228D6A9F00FF9050 /* NetworkPlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -144,6 +145,7 @@
 		133435E222E4546C00F34553 /* ControlPanelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlPanelViewController.swift; sourceTree = "<group>"; };
 		133435E322E4546C00F34553 /* ControlPanelViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ControlPanelViewController.xib; sourceTree = "<group>"; };
 		133435E622E4563800F34553 /* ControlPanelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlPanelViewModel.swift; sourceTree = "<group>"; };
+		1338E34822E6251E008ED63C /* ControlPanelNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlPanelNavigator.swift; sourceTree = "<group>"; };
 		13419848228D694000FF9050 /* Crypton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crypton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13419852228D694300FF9050 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		13419855228D694300FF9050 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -274,6 +276,7 @@
 				133435DD22E453B600F34553 /* VM */,
 				133435E222E4546C00F34553 /* ControlPanelViewController.swift */,
 				133435E322E4546C00F34553 /* ControlPanelViewController.xib */,
+				1338E34822E6251E008ED63C /* ControlPanelNavigator.swift */,
 			);
 			path = ControlPanel;
 			sourceTree = "<group>";
@@ -994,6 +997,7 @@
 				1341989D228DD7FB00FF9050 /* UIView+Shadow.swift in Sources */,
 				13419893228DCF8A00FF9050 /* SplashScreenController.swift in Sources */,
 				134198AA228DD86600FF9050 /* Appearance.swift in Sources */,
+				1338E34922E6251E008ED63C /* ControlPanelNavigator.swift in Sources */,
 				134198B7228DDA7E00FF9050 /* ErrorTracker.swift in Sources */,
 				134198A3228DD82E00FF9050 /* Vibrator.swift in Sources */,
 				134198BB228DDA7E00FF9050 /* ActivityIndicator.swift in Sources */,
