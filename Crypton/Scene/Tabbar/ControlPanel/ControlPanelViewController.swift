@@ -18,6 +18,9 @@ class ControlPanelViewController: UIViewController {
 	@IBOutlet weak var arrowDownImage: UIImageView!
 	@IBOutlet weak var arrowUpImage: UIImageView!
 	@IBOutlet weak var currentPrice: UILabel!
+	@IBOutlet weak var scrollCurrentLabel: UILabel!
+	@IBOutlet weak var headerBlur: UIVisualEffectView!
+	
 	@IBOutlet weak var currentPriceDollarSignLabel: UILabel!
 	
 	//CurrentProfit
@@ -66,22 +69,24 @@ class ControlPanelViewController: UIViewController {
 	@IBOutlet weak var endPositionContainer: UIView!
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		viewModel.doit().subscribe(onNext: { () in
-			print("fuck")
-		}, onError: { (error) in
-			print(error)
-		}).disposed(by: disposeBag)
-		
+		setupUI()
+		bindData()
 	}
 	
 	func setupUI(){
 	view.backgroundColor = Appearance.colors.darkBackground()
 		[autoUpdateSwitch, autoReverseSwitch].forEach{
-			$0?.backgroundColor = Appearance.colors.purple()
+			$0?.onTintColor = Appearance.colors.purple()
 		}
+		scrollCurrentLabel.alpha =  0
+		headerBlur.effect = nil
 		scrollView.contentInset = view.safeAreaInsets
 		symbolLabel.font = Appearance.hub.fonts.symbol()
+		symbolLabel.textColor = Appearance.colors.white()
+		scrollCurrentLabel.font = Appearance.hub.fonts.button()
+		
 		currentPrice.font = Appearance.hub.fonts.bigCurrentPrice()
+		currentProfitTitleLabel.textColor = Appearance.colors.white()
 		currentPriceDollarSignLabel.font = Appearance.hub.fonts.bigMedium()
 		currentProfitTitleLabel.font = Appearance.hub.fonts.sectionTitle()
 		currentProfitPercentLabel.font = Appearance.hub.fonts.bigProfitPercent()
@@ -89,12 +94,24 @@ class ControlPanelViewController: UIViewController {
 		endPositionButton.titleLabel?.font = Appearance.hub.fonts.button()
 		[sideLabel, quantityLabel, totalProfitLabel, changeBTCLabel, changeUSDLabel, currentBTCLabel, currentUSDLabel, stopLossLabel, leverageLabel].forEach{
 			$0?.font = Appearance.hub.fonts.regular()
+			$0?.textColor = Appearance.colors.white()
 		}
-			[stopLossTitleLabel, sideTitleLabel, leverageTitleLabel, quantityTitleLabel, changeBTCTitleLabel, changeUSDTitleLabel, autoUpdateTitleLabel, currentBTCTitleLabel, currentUSDTitleLabel,autoReverseTitleLabel].forEach{
+			[stopLossTitleLabel, sideTitleLabel, leverageTitleLabel, quantityTitleLabel, changeBTCTitleLabel, changeUSDTitleLabel, autoUpdateTitleLabel, currentBTCTitleLabel, currentUSDTitleLabel, totalProfitTitleLabel, autoReverseTitleLabel].forEach{
 			$0?.font = Appearance.hub.fonts.regular()
 			$0?.textColor = Appearance.colors.white()
 		}
-		
+	}
+	
+	func bindData() {
+		let input = ControlPanelViewModel.Input(scrollViewOffset: scrollView.rx.contentOffset.asDriver(), endButton: endPositionButton.rx.tap.asDriver(), autoReverse: autoReverseSwitch.rx.isOn.asDriver(), autoUpdate: autoUpdateSwitch.rx.isOn.asDriver())
+		let output = viewModel.transform(input: input)
+		output.showScrollViewHeader.drive(onNext: { (show) in
+			UIView.animate(withDuration: 0.2, animations: {
+				self.headerBlur.effect = show ? UIBlurEffect(style: .dark) : nil
+				self.scrollCurrentLabel.alpha = show ? 1 : 0
+			})
+		}).disposed(by: disposeBag)
+	
 	}
 	
 }

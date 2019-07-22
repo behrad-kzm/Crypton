@@ -10,6 +10,7 @@ import Foundation
 import RxSwift
 public protocol PositionManager {
 	var current: PositionModel? { get }
+	var currentPrice: Observable<PriceChangeModel> { get }
 	var currentObs: BehaviorSubject<PositionModel?> { get }
 	var acceptableLossPercent: Double { get }
 	var stopLossUpdatingStrategy: StopLossUpdateStrategy { get }

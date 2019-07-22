@@ -211,6 +211,6 @@ extension PositionModel {
 }
 	extension PositionNetworkModel.Response {
 		func asDomain() -> PositionModel {
-			return PositionModel(symbol: self.symbol, quantity: self.currentQty ?? 0, profitPercent: self.unrealisedPnlPcnt ?? 0, liquidationPrice: self.liquidationPrice ?? 0, entryPointPrice: self.avgEntryPrice ?? 0, leverage: self.leverage ?? 1)
+			return PositionModel(symbol: self.symbol, quantity: self.currentQty ?? 0, profitPercent: self.unrealisedPnlPcnt ?? 0, liquid: self.liquidationPrice ?? 0, entry: self.avgEntryPrice ?? 0, leverage: self.leverage ?? 1)
 		}
 }

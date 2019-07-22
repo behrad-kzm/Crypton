@@ -9,8 +9,8 @@ import Domain
 
 final class NetworkProvider {
 	private var apiEndpoint: String {
-		var endpoint = Constants.EndPoints.defaultBinanceBaseUrl.rawValue
-		if let baseURL = UserDefaults.standard.string(forKey: Constants.EndPoints.defaultBinanceBaseUrl.rawValue), !baseURL.isEmpty {
+		var endpoint = Constants.EndPoints.defaultBitmexURL.rawValue
+		if let baseURL = UserDefaults.standard.string(forKey: Constants.EndPoints.defaultBitmexURL.rawValue), !baseURL.isEmpty {
             endpoint = baseURL
         }
 		return endpoint

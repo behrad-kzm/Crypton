@@ -18,7 +18,7 @@ enum Appearance {
 			static let regular = { return UIFont.systemFont(ofSize: 21) }
 			static let bigMedium = { return UIFont.systemFont(ofSize: 45, weight: .medium) }
 			static let bigProfitPercent = { return UIFont.systemFont(ofSize: 100, weight: .light) }
-			static let button = { return UIFont.systemFont(ofSize: 35, weight: .black) }
+			static let button = { return UIFont.systemFont(ofSize: 18, weight: .black) }
 			static let bigCurrentPrice = { return UIFont.systemFont(ofSize: 64, weight: .black) }
 			static let sectionTitle = { return UIFont.systemFont(ofSize: 25, weight: .medium) }
 		}

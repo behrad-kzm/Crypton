@@ -6,8 +6,6 @@
 //  Copyright © 2018 Behrad Kazemi. All rights reserved.
 //
 
-import CoreTelephony
-import Reachability
 public enum Constants {
 	public enum Keys: String {
 		//MARK: - Schedulers name
@@ -21,11 +19,16 @@ public enum Constants {
 		}
 		
 	}
-	
+	public enum Defaults {
+		public static let acceptableLossPercent = { return 15.0 }
+		public static let stopLossUpdatingStrategy = { return StopLossUpdateStrategy.autoUpdate }
+		public static let positionUpdateStrategy = { return PositionUpdateStrategy.forceClose }
+	}
 	public enum EndPoints: String {
 		
 		//Main
-		case defaultBinanceBaseUrl = "https://www.bitmex.com"
+		case defaultBitmexSocket = "wss://www.bitmex.com/realtime"
+		case defaultBitmexURL = "https://www.bitmex.com"
 		case userModel = "/api/v1/user"
 		case exchangeInfo = "exchangeInfo"
 	}

@@ -8,16 +8,32 @@
 
 import Foundation
 import Domain
+import RxCocoa
 import RxSwift
-final class ControlPanelViewModel {
-	//TODO
-	public let usecase: AuthorizationUseCase
+final class ControlPanelViewModel: ViewModelType {
+
+	public let usecase: ControlPanelUseCase
 	private let navigator: ControlPanelNavigator
-	init(useCase: AuthorizationUseCase, navigator: ControlPanelNavigator) {
+	init(useCase: ControlPanelUseCase, navigator: ControlPanelNavigator) {
     self.usecase = useCase
 		self.navigator = navigator
   }
-  func doit() -> Observable<Void> {
-    return usecase.login()
-  }
+	
+	func transform(input: Input) -> Output {
+		let showHeader = input.scrollViewOffset.map {$0.y > 32 ? true : false}
+		return Output(showScrollViewHeader: showHeader)
+	}
+
+}
+extension ControlPanelViewModel {
+	public struct Input {
+		let scrollViewOffset: Driver<CGPoint>
+		let endButton: Driver<Void>
+		let autoReverse: Driver<Bool>
+		let autoUpdate: Driver<Bool>
+	}
+	
+	public struct Output {
+		public let showScrollViewHeader: Driver<Bool>
+	}
 }
