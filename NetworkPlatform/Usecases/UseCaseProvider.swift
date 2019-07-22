@@ -9,15 +9,17 @@ import Foundation
 import Domain
 
 public final class UseCaseProvider: Domain.UseCaseProvider {
-    
-    private let networkProvider: NetworkProvider
-
-    public init() {
-        networkProvider = NetworkProvider()
-    }
-    
-    //MARK: - Get Token + Login
-    public func makeAuthorizationUseCase() -> Domain.AuthorizationUseCase {
-        return AuthorizationUseCase(network: networkProvider.makeAuthorizationNetwork())
-    }
+  
+  
+  
+  private let networkProvider: NetworkProvider
+  
+  public init() {
+    networkProvider = NetworkProvider()
+  }
+  
+  //MARK: - Get Token + Login
+  public func makeAuthorizationUseCase() -> Domain.AuthorizationUseCase {
+    return AuthorizationUseCase(network: networkProvider.makeAuthorizationNetwork())
+  }
 }

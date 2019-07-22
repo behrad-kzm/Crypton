@@ -7,6 +7,7 @@ end
 def rx_cocoa
 	pod 'RxCocoa', '~> 4.0'
 end
+
 target 'Crypton' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
@@ -34,10 +35,6 @@ target 'NetworkPlatform' do
 	pod 'Alamofire'
 	pod 'RxAlamofire'
 	pod 'RxStarscream'
-	pod 'RxRealm'
-	pod 'RealmSwift'
-	pod 'Realm'
-	  pod 'QueryKit'
   # Pods for NetworkPlatform
 
 end

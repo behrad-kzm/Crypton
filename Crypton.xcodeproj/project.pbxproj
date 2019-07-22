@@ -89,6 +89,11 @@
 		13F97E8522DDE37200BDC407 /* MarketPriceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F97E8422DDE37200BDC407 /* MarketPriceModel.swift */; };
 		2567DFE622E4C04100E5E2BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2567DFE522E4C04100E5E2BC /* AppDelegate.swift */; };
 		3704F5D757F4E028E8D29820 /* Pods_Crypton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8518DD00A78F597A5353EBC1 /* Pods_Crypton.framework */; };
+		9A08490E22E5C9B5000B9EF5 /* StartPositionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A08490C22E5C9B5000B9EF5 /* StartPositionController.swift */; };
+		9A08490F22E5C9B5000B9EF5 /* StartPositionController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A08490D22E5C9B5000B9EF5 /* StartPositionController.xib */; };
+		9A08491122E5C9D2000B9EF5 /* StartPositionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A08491022E5C9D2000B9EF5 /* StartPositionViewModel.swift */; };
+		9A08491322E5CA69000B9EF5 /* StartPositionNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A08491222E5CA69000B9EF5 /* StartPositionNavigator.swift */; };
+		9A08491622E5CB13000B9EF5 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A08491522E5CB13000B9EF5 /* UIViewControllerExtension.swift */; };
 		CEBDE64D33E3D0F5E7D19C70 /* Pods_Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19017B82DC9D4936990EC3CB /* Pods_Domain.framework */; };
 /* End PBXBuildFile section */
 
@@ -211,6 +216,11 @@
 		63B9775D30C866E314B4241A /* Pods-Domain.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Domain.release.xcconfig"; path = "Pods/Target Support Files/Pods-Domain/Pods-Domain.release.xcconfig"; sourceTree = "<group>"; };
 		72177B59BE21FF030670432E /* Pods-NetworkPlatform.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkPlatform.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NetworkPlatform/Pods-NetworkPlatform.debug.xcconfig"; sourceTree = "<group>"; };
 		8518DD00A78F597A5353EBC1 /* Pods_Crypton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Crypton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A08490C22E5C9B5000B9EF5 /* StartPositionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPositionController.swift; sourceTree = "<group>"; };
+		9A08490D22E5C9B5000B9EF5 /* StartPositionController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StartPositionController.xib; sourceTree = "<group>"; };
+		9A08491022E5C9D2000B9EF5 /* StartPositionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPositionViewModel.swift; sourceTree = "<group>"; };
+		9A08491222E5CA69000B9EF5 /* StartPositionNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPositionNavigator.swift; sourceTree = "<group>"; };
+		9A08491522E5CB13000B9EF5 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		9F1E5FB9F705CAFF9AC17FAC /* Pods_NetworkPlatform.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NetworkPlatform.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB4D9C369E5C4FA18D79F8CE /* Pods-NetworkPlatform.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkPlatform.release.xcconfig"; path = "Pods/Target Support Files/Pods-NetworkPlatform/Pods-NetworkPlatform.release.xcconfig"; sourceTree = "<group>"; };
 		F950280053A900985F9956C6 /* Pods-Crypton.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Crypton.release.xcconfig"; path = "Pods/Target Support Files/Pods-Crypton/Pods-Crypton.release.xcconfig"; sourceTree = "<group>"; };
@@ -448,9 +458,8 @@
 		134198AC228DD98C00FF9050 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				134198B6228DDA7E00FF9050 /* ActivityIndicator.swift */,
-				134198B2228DDA7E00FF9050 /* ErrorTracker.swift */,
-				134198B3228DDA7E00FF9050 /* Observable+Ext.swift */,
+				9A08491722E5CB20000B9EF5 /* Components */,
+				9A08491422E5CAFF000B9EF5 /* Extenstions */,
 				134198B5228DDA7E00FF9050 /* TimerCreator.swift */,
 				134198B4228DDA7E00FF9050 /* UITools.swift */,
 			);
@@ -594,6 +603,7 @@
 		134BC666228E017700F74CBB /* Tabbar */ = {
 			isa = PBXGroup;
 			children = (
+				9A08490B22E5C99A000B9EF5 /* StartPosition */,
 				133435DC22E453A000F34553 /* ControlPanel */,
 				134BC668228E01C400F74CBB /* MainTabbarNavigator.swift */,
 			);
@@ -670,6 +680,35 @@
 				CB4D9C369E5C4FA18D79F8CE /* Pods-NetworkPlatform.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		9A08490B22E5C99A000B9EF5 /* StartPosition */ = {
+			isa = PBXGroup;
+			children = (
+				9A08491022E5C9D2000B9EF5 /* StartPositionViewModel.swift */,
+				9A08490C22E5C9B5000B9EF5 /* StartPositionController.swift */,
+				9A08490D22E5C9B5000B9EF5 /* StartPositionController.xib */,
+				9A08491222E5CA69000B9EF5 /* StartPositionNavigator.swift */,
+			);
+			path = StartPosition;
+			sourceTree = "<group>";
+		};
+		9A08491422E5CAFF000B9EF5 /* Extenstions */ = {
+			isa = PBXGroup;
+			children = (
+				134198B3228DDA7E00FF9050 /* Observable+Ext.swift */,
+				9A08491522E5CB13000B9EF5 /* UIViewControllerExtension.swift */,
+			);
+			path = Extenstions;
+			sourceTree = "<group>";
+		};
+		9A08491722E5CB20000B9EF5 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				134198B6228DDA7E00FF9050 /* ActivityIndicator.swift */,
+				134198B2228DDA7E00FF9050 /* ErrorTracker.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -802,6 +841,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A08490F22E5C9B5000B9EF5 /* StartPositionController.xib in Resources */,
 				13419856228D694300FF9050 /* LaunchScreen.storyboard in Resources */,
 				13419891228DCF8A00FF9050 /* SplashScreenController.xib in Resources */,
 				13419853228D694300FF9050 /* Assets.xcassets in Resources */,
@@ -856,7 +896,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Crypton/Pods-Crypton-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-Crypton/Pods-Crypton-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
@@ -864,10 +904,6 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/QueryKit/QueryKit.framework",
-				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
-				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/RxRealm/RxRealm.framework",
 				"${BUILT_PRODUCTS_DIR}/RxStarscream/RxStarscream.framework",
 				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
 			);
@@ -882,16 +918,12 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QueryKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRealm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxStarscream.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Crypton/Pods-Crypton-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Crypton/Pods-Crypton-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		56CD359AF83145F1B0B31DA8 /* [CP] Check Pods Manifest.lock */ = {
@@ -956,6 +988,7 @@
 				1341989A228DD7FB00FF9050 /* UIColor+Hex.swift in Sources */,
 				134198B9228DDA7E00FF9050 /* UITools.swift in Sources */,
 				134BC669228E01C400F74CBB /* MainTabbarNavigator.swift in Sources */,
+				9A08490E22E5C9B5000B9EF5 /* StartPositionController.swift in Sources */,
 				134198AB228DD86600FF9050 /* Strings.swift in Sources */,
 				1341989C228DD7FB00FF9050 /* UIColor+Combine.swift in Sources */,
 				1341989D228DD7FB00FF9050 /* UIView+Shadow.swift in Sources */,
@@ -964,13 +997,16 @@
 				134198B7228DDA7E00FF9050 /* ErrorTracker.swift in Sources */,
 				134198A3228DD82E00FF9050 /* Vibrator.swift in Sources */,
 				134198BB228DDA7E00FF9050 /* ActivityIndicator.swift in Sources */,
+				9A08491622E5CB13000B9EF5 /* UIViewControllerExtension.swift in Sources */,
 				134BC66C228E023100F74CBB /* MainNavigationController.swift in Sources */,
 				133435E422E4546C00F34553 /* ControlPanelViewController.swift in Sources */,
+				9A08491122E5C9D2000B9EF5 /* StartPositionViewModel.swift in Sources */,
 				134198A4228DD82E00FF9050 /* String+CastToPersian.swift in Sources */,
 				134198B8228DDA7E00FF9050 /* Observable+Ext.swift in Sources */,
 				133435E722E4563800F34553 /* ControlPanelViewModel.swift in Sources */,
 				134198B0228DDA0E00FF9050 /* String+AttributedCast.swift in Sources */,
 				134BC69F228E153600F74CBB /* Bundle+LoadView.swift in Sources */,
+				9A08491322E5CA69000B9EF5 /* StartPositionNavigator.swift in Sources */,
 				134198AE228DD9F600FF9050 /* String+Validation.swift in Sources */,
 				134198BA228DDA7E00FF9050 /* TimerCreator.swift in Sources */,
 			);
@@ -1181,13 +1217,13 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 32SKEMQWAM;
+				DEVELOPMENT_TEAM = V7HR628783;
 				INFOPLIST_FILE = Crypton/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.bekapps.Crypton;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bekapps.Crypton1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1201,13 +1237,13 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 32SKEMQWAM;
+				DEVELOPMENT_TEAM = V7HR628783;
 				INFOPLIST_FILE = Crypton/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.bekapps.Crypton;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bekapps.Crypton1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -7,7 +7,7 @@
 
 import Foundation
 import Domain
-import NetworkPlatform
+
 class MainTabbarNavigator {
   
   private let navigationController: UINavigationController
@@ -22,13 +22,13 @@ class MainTabbarNavigator {
   
   func setup(withIndex index: Int = 0) {
     //Setting up landing quiz
-    let controlPanelVC = ControlPanelViewController(nibName: "ControlPanelViewController", bundle: nil)
-    controlPanelVC.viewModel = ControlPanelViewModel(useCase: services.makeAuthorizationUseCase())
+    let startPostionVC = StartPositionController(nibName: "StartPositionController", bundle: nil)
+    let startPostionNavigator = StartPositionNavigator(services: services, navigationController: navigationController)
+    startPostionVC.viewModel = StartPositionViewModel(navigator: startPostionNavigator, useCase: <#T##OrderUsecase#>)
    
-    tabbarVC.viewControllers = [controlPanelVC]
+    tabbarVC.viewControllers = [startPostionVC]
 		tabbarVC.selectedIndex = index
     navigationController.pushViewController(tabbarVC, animated: true)
-    
   }
   
   func toIndex(index: Int){
