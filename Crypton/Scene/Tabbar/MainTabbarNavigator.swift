@@ -24,8 +24,8 @@ class MainTabbarNavigator {
     //Setting up landing quiz
     let startPostionVC = StartPositionController(nibName: "StartPositionController", bundle: nil)
     let startPostionNavigator = StartPositionNavigator(services: services, navigationController: navigationController)
-    startPostionVC.viewModel = StartPositionViewModel(navigator: startPostionNavigator, useCase: <#T##OrderUsecase#>)
-   
+//    startPostionVC.viewModel = StartPositionViewModel(navigator: startPostionNavigator, useCase: )
+		
     tabbarVC.viewControllers = [startPostionVC]
 		tabbarVC.selectedIndex = index
     navigationController.pushViewController(tabbarVC, animated: true)

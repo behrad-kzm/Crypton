@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Domain
 import RxSwift
 class ControlPanelViewController: UIViewController {
 	
@@ -70,5 +71,12 @@ class ControlPanelViewController: UIViewController {
       }).disposed(by: disposeBag)
 
     }
+	
+	func setupUI(){
+		[stopLossTitleLabel,sideTitleLabel,leverageTitleLabel,quantityTitleLabel,changeBTCTitleLabel,changeUSDTitleLabel,autoUpdateTitleLabel,currentBTCTitleLabel,currentUSDTitleLabel].forEach{
+			$0?.font = Appearance.hub.fonts.sectionTitle()
+			
+		}
+	}
 
 }

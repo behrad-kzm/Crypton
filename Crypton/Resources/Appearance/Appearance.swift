@@ -9,7 +9,7 @@
 import UIKit
 
 enum Appearance {
-	private enum hub {
+	enum hub {
 		private static let boldFontName = { return "" }	//[TODO]type bold font name here
 		private static let regularFontName = { return " " } //[TODO]type regular font name here
 		
@@ -19,6 +19,7 @@ enum Appearance {
 			static let bigProfitPercent = { return UIFont.systemFont(ofSize: 100, weight: .light) }
 			static let button = { return UIFont.systemFont(ofSize: 35, weight: .black) }
 			static let bigCurrentPrice = { return UIFont.systemFont(ofSize: 64, weight: .black) }
+			static let sectionTitle = { return UIFont.systemFont(ofSize: 25, weight: .medium) }
 		}
 		
 	}
