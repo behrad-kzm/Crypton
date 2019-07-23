@@ -24,12 +24,11 @@ class MainTabbarNavigator {
     //Setting up landing quiz
     let startPostionVC = StartPositionController(nibName: "StartPositionController", bundle: nil)
     let startPostionNavigator = StartPositionNavigator(services: services, navigationController: navigationController)
-//    startPostionVC.viewModel = StartPositionViewModel(navigator: startPostionNavigator, useCase: )
-		
+    startPostionVC.viewModel = StartPositionViewModel(navigator: startPostionNavigator, useCase: nil)
 		
 		let ControlPanelVC = ControlPanelViewController(nibName: "ControlPanelViewController", bundle: nil)
 		let controlPanelNavigator = ControlPanelNavigator(services: services, navigationController: navigationController)
-		    ControlPanelVC.viewModel = ControlPanelViewModel(useCase: nil, navigator: controlPanelNavigator)
+    ControlPanelVC.viewModel = ControlPanelViewModel(useCase: nil, navigator: controlPanelNavigator)
     tabbarVC.viewControllers = [startPostionVC, ControlPanelVC]
 		tabbarVC.selectedIndex = index
     navigationController.pushViewController(tabbarVC, animated: true)
