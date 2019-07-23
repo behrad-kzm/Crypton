@@ -30,6 +30,7 @@
 		1338E35522E64177008ED63C /* ChangingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1338E35422E64177008ED63C /* ChangingType.swift */; };
 		1338E35722E648AE008ED63C /* ControlPanelUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1338E35622E648AE008ED63C /* ControlPanelUseCase.swift */; };
 		1338E35A22E64997008ED63C /* ControlPanelDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1338E35922E64997008ED63C /* ControlPanelDataModel.swift */; };
+		1338E35D22E6DDB3008ED63C /* ControlPanelUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1338E35C22E6DDB3008ED63C /* ControlPanelUseCase.swift */; };
 		13419853228D694300FF9050 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13419852228D694300FF9050 /* Assets.xcassets */; };
 		13419856228D694300FF9050 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13419854228D694300FF9050 /* LaunchScreen.storyboard */; };
 		13419866228D6A9F00FF9050 /* NetworkPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 13419864228D6A9F00FF9050 /* NetworkPlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -160,6 +161,7 @@
 		1338E35422E64177008ED63C /* ChangingType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangingType.swift; sourceTree = "<group>"; };
 		1338E35622E648AE008ED63C /* ControlPanelUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlPanelUseCase.swift; sourceTree = "<group>"; };
 		1338E35922E64997008ED63C /* ControlPanelDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlPanelDataModel.swift; sourceTree = "<group>"; };
+		1338E35C22E6DDB3008ED63C /* ControlPanelUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlPanelUseCase.swift; sourceTree = "<group>"; };
 		13419848228D694000FF9050 /* Crypton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crypton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13419852228D694300FF9050 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		13419855228D694300FF9050 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -323,6 +325,14 @@
 			isa = PBXGroup;
 			children = (
 				1338E35922E64997008ED63C /* ControlPanelDataModel.swift */,
+			);
+			path = ControlPanel;
+			sourceTree = "<group>";
+		};
+		1338E35B22E6DD98008ED63C /* ControlPanel */ = {
+			isa = PBXGroup;
+			children = (
+				1338E35C22E6DDB3008ED63C /* ControlPanelUseCase.swift */,
 			);
 			path = ControlPanel;
 			sourceTree = "<group>";
@@ -537,6 +547,7 @@
 		134198BE228DDABF00FF9050 /* Usecases */ = {
 			isa = PBXGroup;
 			children = (
+				1338E35B22E6DD98008ED63C /* ControlPanel */,
 				1338E34A22E638C7008ED63C /* PositionManager */,
 				134198D0228DDBB600FF9050 /* Authorization */,
 				134198CE228DDBA300FF9050 /* UseCaseProvider.swift */,
@@ -1071,6 +1082,7 @@
 			files = (
 				134198CB228DDB1700FF9050 /* Network.swift in Sources */,
 				134198C5228DDAFC00FF9050 /* ResponseAnalytics.swift in Sources */,
+				1338E35D22E6DDB3008ED63C /* ControlPanelUseCase.swift in Sources */,
 				134198D5228DDBF900FF9050 /* AuthenticationNetwork.swift in Sources */,
 				134198C3228DDAFC00FF9050 /* DateFormatterExtension.swift in Sources */,
 				134198C4228DDAFC00FF9050 /* EncodableExtension.swift in Sources */,

@@ -10,8 +10,6 @@ import Domain
 
 public final class UseCaseProvider: Domain.UseCaseProvider {
   
-  
-  
   private let networkProvider: NetworkProvider
   
   public init() {
@@ -22,4 +20,8 @@ public final class UseCaseProvider: Domain.UseCaseProvider {
   public func makeAuthorizationUseCase() -> Domain.AuthorizationUseCase {
     return AuthorizationUseCase(network: networkProvider.makeAuthorizationNetwork())
   }
+	
+	public func makeControlPanelUseCase() -> Domain.ControlPanelUseCase {
+		return ControlPanelUseCase()
+	}
 }
