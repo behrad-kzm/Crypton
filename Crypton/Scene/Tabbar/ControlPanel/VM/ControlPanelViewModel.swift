@@ -12,9 +12,9 @@ import RxCocoa
 import RxSwift
 final class ControlPanelViewModel: ViewModelType {
 
-	public let usecase: ControlPanelUseCase
+	public let usecase: ControlPanelUseCase?
 	private let navigator: ControlPanelNavigator
-	init(useCase: ControlPanelUseCase, navigator: ControlPanelNavigator) {
+	init(useCase: ControlPanelUseCase?, navigator: ControlPanelNavigator) {
     self.usecase = useCase
 		self.navigator = navigator
   }

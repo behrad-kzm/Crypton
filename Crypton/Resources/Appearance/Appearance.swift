@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 enum Appearance {
 	enum hub {
@@ -22,7 +23,7 @@ enum Appearance {
 			static let bigCurrentPrice = { return UIFont.systemFont(ofSize: 64, weight: .black) }
 			static let sectionTitle = { return UIFont.systemFont(ofSize: 25, weight: .medium) }
 		}
-		
+
 	}
 	
 	enum colors {
@@ -35,4 +36,8 @@ enum Appearance {
 		static let white = { return UIColor(white: 0.9, alpha: 1)}
 		
 	}
+  
+  enum cornerRadius {
+    static let buttonCornerRadius = { return CGFloat.init(10) }
+  }
 }
