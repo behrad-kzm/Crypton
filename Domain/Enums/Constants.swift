@@ -27,7 +27,9 @@ public enum Constants {
 	public enum EndPoints: String {
 		
 		//Main
+		
 		case defaultBitmexSocket = "wss://www.bitmex.com/realtime"
+		case socketXBT = "?subscribe=instrument:XBTUSD"
 		case defaultBitmexURL = "https://www.bitmex.com"
 		case userModel = "/api/v1/user"
 		case exchangeInfo = "exchangeInfo"

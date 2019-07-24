@@ -31,6 +31,7 @@
 		1338E35722E648AE008ED63C /* ControlPanelUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1338E35622E648AE008ED63C /* ControlPanelUseCase.swift */; };
 		1338E35A22E64997008ED63C /* ControlPanelDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1338E35922E64997008ED63C /* ControlPanelDataModel.swift */; };
 		1338E35D22E6DDB3008ED63C /* ControlPanelUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1338E35C22E6DDB3008ED63C /* ControlPanelUseCase.swift */; };
+		1338E35F22E85620008ED63C /* TickPriceChangeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1338E35E22E85620008ED63C /* TickPriceChangeEnum.swift */; };
 		13419853228D694300FF9050 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13419852228D694300FF9050 /* Assets.xcassets */; };
 		13419856228D694300FF9050 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13419854228D694300FF9050 /* LaunchScreen.storyboard */; };
 		13419866228D6A9F00FF9050 /* NetworkPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 13419864228D6A9F00FF9050 /* NetworkPlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -162,6 +163,7 @@
 		1338E35622E648AE008ED63C /* ControlPanelUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlPanelUseCase.swift; sourceTree = "<group>"; };
 		1338E35922E64997008ED63C /* ControlPanelDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlPanelDataModel.swift; sourceTree = "<group>"; };
 		1338E35C22E6DDB3008ED63C /* ControlPanelUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlPanelUseCase.swift; sourceTree = "<group>"; };
+		1338E35E22E85620008ED63C /* TickPriceChangeEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickPriceChangeEnum.swift; sourceTree = "<group>"; };
 		13419848228D694000FF9050 /* Crypton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crypton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13419852228D694300FF9050 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		13419855228D694300FF9050 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -594,6 +596,7 @@
 				13F97E7B22DDDA4200BDC407 /* PositionManagerStatus.swift */,
 				1338E35022E63E51008ED63C /* SymbolType.swift */,
 				1338E35422E64177008ED63C /* ChangingType.swift */,
+				1338E35E22E85620008ED63C /* TickPriceChangeEnum.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -1119,6 +1122,7 @@
 				13F97E6822DDBA9600BDC407 /* PositionManager.swift in Sources */,
 				133435C722E3136A00F34553 /* PositionNetworkModel.swift in Sources */,
 				1338E35322E6410F008ED63C /* PriceChangeModel.swift in Sources */,
+				1338E35F22E85620008ED63C /* TickPriceChangeEnum.swift in Sources */,
 				133435D922E38D2900F34553 /* Data+BytesArray.swift in Sources */,
 				133435DB22E38D2900F34553 /* EasyCrypt.swift in Sources */,
 				133435DA22E38D2900F34553 /* String+BytesArray.swift in Sources */,
@@ -1289,13 +1293,13 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = V7HR628783;
+				DEVELOPMENT_TEAM = D7NRM56YK7;
 				INFOPLIST_FILE = Crypton/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.behSal.Crypton;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bekapps.Crypton;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1309,13 +1313,13 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = V7HR628783;
+				DEVELOPMENT_TEAM = D7NRM56YK7;
 				INFOPLIST_FILE = Crypton/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.behSal.Crypton;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bekapps.Crypton;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

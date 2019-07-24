@@ -11,5 +11,5 @@ import RxSwift
 
 public protocol ControlPanelUseCase {
 	func currentPrice() -> Observable<PriceChangeModel>
-	func panelData() -> Observable<ControlPanelDataModel>
+//	func panelData() -> Observable<ControlPanelDataModel>
 }

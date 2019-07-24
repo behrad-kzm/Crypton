@@ -105,13 +105,36 @@ class ControlPanelViewController: UIViewController {
 	func bindData() {
 		let input = ControlPanelViewModel.Input(scrollViewOffset: scrollView.rx.contentOffset.asDriver(), endButton: endPositionButton.rx.tap.asDriver(), autoReverse: autoReverseSwitch.rx.isOn.asDriver(), autoUpdate: autoUpdateSwitch.rx.isOn.asDriver())
 		let output = viewModel.transform(input: input)
-		output.showScrollViewHeader.drive(onNext: { (show) in
+		[output.showScrollViewHeader.drive(onNext: { (show) in
 			UIView.animate(withDuration: 0.2, animations: {
 				self.headerBlur.effect = show ? UIBlurEffect(style: .dark) : nil
 				self.scrollCurrentLabel.alpha = show ? 1 : 0
 			})
-		}).disposed(by: disposeBag)
+		}),
+		 output.currentChange.drive(onNext: { (change) in
+			self.currentPrice.text = change.price
+			self.currentPrice.textColor = change.changeType.getColor()
+			self.scrollCurrentLabel.text = change.price
+			self.scrollCurrentLabel.textColor = change.changeType.getColor()
+			self.currentPriceDollarSignLabel.textColor = change.changeType.getColor()
+			self.arrowDownImage.alpha = (change.changeType != .bearish) ? 0 : 1
+			self.arrowUpImage.alpha = (change.changeType == .bearish) ? 0 : 1
+		})].forEach { (item) in
+			item.disposed(by: disposeBag)
+		}
 	
 	}
 	
+}
+extension ChangingType {
+	func getColor() -> UIColor {
+		switch self {
+		case .bearish:
+			return Appearance.colors.red()
+		case .bullish:
+			return Appearance.colors.green()
+		default:
+			return Appearance.colors.green()//TODOoooooooo think what color should it be!
+		}
+	}
 }

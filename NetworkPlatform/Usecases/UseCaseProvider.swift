@@ -11,9 +11,11 @@ import Domain
 public final class UseCaseProvider: Domain.UseCaseProvider {
   
   private let networkProvider: NetworkProvider
-  
-  public init() {
+	private let positionManager: Domain.PositionManager
+	
+	public init(positionManager: Domain.PositionManager) {
     networkProvider = NetworkProvider()
+		self.positionManager = positionManager
   }
   
   //MARK: - Get Token + Login
@@ -22,6 +24,6 @@ public final class UseCaseProvider: Domain.UseCaseProvider {
   }
 	
 	public func makeControlPanelUseCase() -> Domain.ControlPanelUseCase {
-		return ControlPanelUseCase()
+		return ControlPanelUseCase(manager: self.positionManager)
 	}
 }

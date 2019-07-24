@@ -13,7 +13,8 @@ final class Application {
   private let networkUseCaseProvider: NetworkPlatform.UseCaseProvider
   private init() {
     AnalyticProxy.setup()
-    self.networkUseCaseProvider = NetworkPlatform.UseCaseProvider()
+		let positionManager = PositionManager.shared
+		self.networkUseCaseProvider = NetworkPlatform.UseCaseProvider(positionManager: positionManager)
   }
   
   func configureMainInterface(in window: UIWindow) {

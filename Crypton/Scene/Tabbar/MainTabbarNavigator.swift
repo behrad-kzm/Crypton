@@ -26,10 +26,11 @@ class MainTabbarNavigator {
     let startPostionNavigator = StartPositionNavigator(services: services, navigationController: navigationController)
     startPostionVC.viewModel = StartPositionViewModel(navigator: startPostionNavigator, useCase: nil)
 		
-		let ControlPanelVC = ControlPanelViewController(nibName: "ControlPanelViewController", bundle: nil)
+		let controlPanelVC = ControlPanelViewController(nibName: "ControlPanelViewController", bundle: nil)
 		let controlPanelNavigator = ControlPanelNavigator(services: services, navigationController: navigationController)
-		    ControlPanelVC.viewModel = ControlPanelViewModel(useCase: services.makeControlPanelUseCase(), navigator: controlPanelNavigator)
-    tabbarVC.viewControllers = [startPostionVC, ControlPanelVC]
+		    controlPanelVC.viewModel = ControlPanelViewModel(useCase: services.makeControlPanelUseCase(), navigator: controlPanelNavigator)
+		
+    tabbarVC.viewControllers = [startPostionVC, controlPanelVC]
 		tabbarVC.selectedIndex = index
     navigationController.pushViewController(tabbarVC, animated: true)
   }

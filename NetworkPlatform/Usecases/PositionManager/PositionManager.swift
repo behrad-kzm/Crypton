@@ -11,9 +11,9 @@ import Domain
 import Starscream
 import RxSwift
 import RxCocoa
-
 import RxStarscream
-public struct PositionManager: Domain.PositionManager {
+
+public final class PositionManager: Domain.PositionManager {
 	
 	public var current: PositionModel?{
 		didSet {
@@ -43,14 +43,25 @@ public struct PositionManager: Domain.PositionManager {
 	public var statusObs = BehaviorSubject<PositionManagerStatus>(value: .closed)
 
 	public var stopLossOrderObs = BehaviorSubject<StopMarketOrder?>(value: nil)
+	let disposeBag = DisposeBag()
+	var socket: WebSocket
+	public static let shared: PositionManager = {
+		let manager = PositionManager()
+		return manager
+	}()
 	
-	var socket = WebSocket(url: URL(string: Constants.EndPoints.defaultBitmexSocket.rawValue)!)
-	
-	public init() {
-		let btcINstrumentUpdate = socket.rx.text.flatMapLatest { (mesage) -> Maybe<InstrumentUpdateSymbol.Row> in
-			let result = Maybe<InstrumentUpdateSymbol.Row>.create { maybe in
+	private init() {
+		let socketPath = Constants.EndPoints.defaultBitmexSocket.rawValue + Constants.EndPoints.socketXBT.rawValue
+		socket = WebSocket(url: URL(string: socketPath)!)
+		socket.connect()
+		socket.rx.connected.map { (connected) -> Bool in
+			print("connected:\(connected ? "true" : "false")")
+			return true
+		}.subscribe().disposed(by: disposeBag)
+		let btcINstrumentUpdate = socket.rx.text.flatMapLatest { (mesage) -> Maybe<InstrumentUpdateSymbol> in
+			let result = Maybe<InstrumentUpdateSymbol>.create { maybe in
 				do{
-					let object = try JSONDecoder().decode(InstrumentUpdateSymbol.Row.self, from: mesage.data(using: .utf8)!)
+					let object = try JSONDecoder().decode(InstrumentUpdateSymbol.self, from: mesage.data(using: .utf8)!)
 					maybe(.success(object))
 				} catch {
 					maybe(.completed)
@@ -58,27 +69,18 @@ public struct PositionManager: Domain.PositionManager {
 				return Disposables.create {}
 			}
 			return result
-			}.filter { (row) -> Bool in
-				row.symbol == SymbolType.BTCUSD.rawValue
-		}
+			}.map({ (item) -> InstrumentUpdateSymbol.Row? in
+				return item.data.first
+			}).filter{$0 != nil}.map{return $0!}
 		
-		self.currentPrice = btcINstrumentUpdate.map({ (row) -> PriceChangeModel in
-			return PriceChangeModel(price: row.lastPrice, type: ChangingType.representType(double: row.lastChangePcnt), change: row.lastChangePcnt)
-		}).startWith(PriceChangeModel(price: 0, type: .stable, change: 0.0))
-		setup()
+		self.currentPrice = btcINstrumentUpdate.filter{$0.lastPrice != nil}.map({ (row) -> PriceChangeModel in
+
+			return PriceChangeModel(price: row.lastPrice!, type: ChangingType.representType(tick: row.lastTickDirection))
+		}).startWith(PriceChangeModel(price: 0, type: .stable))
+
 	}
 	
-	func startStreaming() {
-		socket.connect()
-	}
-	
-	func setup() {
-		startStreaming()
-		socket.rx.connected.map { (connected) -> Bool in
-			print("connected:\(connected ? "true" : "false")")
-			return true
-		}.subscribe().disposed(by: DisposeBag())
-	}
+
 	public func closePositionMarket() -> Observable<Void> {
 		
 		
