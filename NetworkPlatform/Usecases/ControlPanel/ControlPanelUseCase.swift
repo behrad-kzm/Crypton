@@ -12,12 +12,13 @@ import RxSwift
 
 public struct ControlPanelUseCase: Domain.ControlPanelUseCase {
 
-	private let manager: Domain.PositionManager
-	public init (manager: Domain.PositionManager) {
-		self.manager = manager
+	private let marketInfo: Domain.MarketUseCase
+	public init (marketInfo: Domain.MarketUseCase) {
+		self.marketInfo = marketInfo
 	}
+	
 	public func currentPrice() -> Observable<PriceChangeModel> {
-		return manager.currentPrice
+		return marketInfo.getCurrentPrice(symbol: SymbolType.BTCUSD.rawValue)
 	}
 	
 //	public func panelData() -> Observable<ControlPanelDataModel> {

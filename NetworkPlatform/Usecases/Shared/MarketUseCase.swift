@@ -19,4 +19,5 @@ public struct MarketUseCase: Domain.MarketUseCase {
   public func getCurrentPrice(symbol: String) -> Observable<PriceChangeModel> {
     return manager.currentPrice
   }
+	
 }
