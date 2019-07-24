@@ -9,7 +9,6 @@
 import Foundation
 import Domain
 import RxSwift
-import RxCocoa
 
 public struct ControlPanelUseCase: Domain.ControlPanelUseCase {
 

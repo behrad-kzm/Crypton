@@ -10,7 +10,7 @@ import Foundation
 import RxSwift
 
 public protocol MarketUseCase {
-	func getCurrentPrice(symbol: String) -> Observable<MarketPriceModel>
+	func getCurrentPrice(symbol: String) -> Observable<PriceChangeModel>
 }
 
 

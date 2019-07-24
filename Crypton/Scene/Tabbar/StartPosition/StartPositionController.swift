@@ -96,6 +96,18 @@ class StartPositionController: UIViewController {
     
     bindTexts(with: output)
     bindTopBlurHeader(with: output)
+    bindCurrentPrice(with: output)
+  }
+  private func bindCurrentPrice(with output: StartPositionViewModel.Output) {
+    output.currentPrice.drive(onNext: { (change) in
+      self.currentPrice.text = change.price
+      self.currentPrice.textColor = change.changeType.getColor()
+      self.scrollCurrentLabel.text = change.price
+      self.scrollCurrentLabel.textColor = change.changeType.getColor()
+      self.currentPriceDollarSignLabel.textColor = change.changeType.getColor()
+      self.arrowDownImage.alpha = (change.changeType != .bearish) ? 0 : 1
+      self.arrowUpImage.alpha = (change.changeType == .bearish) ? 0 : 1
+    }).disposed(by: disposeBag)
   }
   private func bindTexts(with output: StartPositionViewModel.Output) {
     output.lossMarginValueString.drive(lossMarginValueLabel.rx.text).disposed(by: disposeBag)
@@ -108,5 +120,10 @@ class StartPositionController: UIViewController {
         self?.scrollCurrentLabel.alpha = show ? 1 : 0
       })
     }).disposed(by: disposeBag)
+  }
+  @IBAction private func longAndShortButtonPressed(_ sender: UIButton) {
+    if sender == longButton {
+      shortButton.alpha = 0.5
+    }
   }
 }

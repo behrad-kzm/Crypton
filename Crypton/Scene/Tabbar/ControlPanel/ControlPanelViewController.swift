@@ -134,7 +134,7 @@ extension ChangingType {
 		case .bullish:
 			return Appearance.colors.green()
 		default:
-			return Appearance.colors.green()//TODOoooooooo think what color should it be!
+      return Appearance.colors.green()//TODOoooooooo think what color should it be! khar madare todo ro gayidi tahesham hichvaght radifesh nemikoni :D haminja beres karasho dge
 		}
 	}
 }

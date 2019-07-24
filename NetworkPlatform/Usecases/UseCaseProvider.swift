@@ -9,7 +9,7 @@ import Foundation
 import Domain
 
 public final class UseCaseProvider: Domain.UseCaseProvider {
-  
+ 
   private let networkProvider: NetworkProvider
 	private let positionManager: Domain.PositionManager
 	
@@ -18,7 +18,6 @@ public final class UseCaseProvider: Domain.UseCaseProvider {
 		self.positionManager = positionManager
   }
   
-  //MARK: - Get Token + Login
   public func makeAuthorizationUseCase() -> Domain.AuthorizationUseCase {
     return AuthorizationUseCase(network: networkProvider.makeAuthorizationNetwork())
   }
@@ -26,4 +25,8 @@ public final class UseCaseProvider: Domain.UseCaseProvider {
 	public func makeControlPanelUseCase() -> Domain.ControlPanelUseCase {
 		return ControlPanelUseCase(manager: self.positionManager)
 	}
+  
+  public func makeMarketUseCase() -> Domain.MarketUseCase {
+    return MarketUseCase(manager: self.positionManager)
+  }
 }

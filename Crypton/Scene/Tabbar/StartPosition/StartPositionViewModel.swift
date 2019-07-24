@@ -13,20 +13,25 @@ import RxCocoa
 
 final class StartPositionViewModel: ViewModelType {
   
-  public let usecase: OrderUsecase?
+  public let marketUseCase: MarketUseCase
   private let navigator: StartPositionNavigator
   
-  init(navigator: StartPositionNavigator, useCase: OrderUsecase?) {
-    self.usecase = useCase
+  init(navigator: StartPositionNavigator, marketUseCase: MarketUseCase) {
+    self.marketUseCase = marketUseCase
     self.navigator = navigator
   }
   
   func transform(input: Input) -> Output {
+    // UI Transforms
     let showHeader = input.scrollViewOffset.map {$0.y > 32 ? true : false}
     let lossMarginValueString = input.lossMarginValue.map{ "\(Int($0 * 100))%" }.asDriver(onErrorJustReturn: "")
     let leverageValueString = input.leverageValue.map{ "\(Int($0 * 100))x" }.asDriver(onErrorJustReturn: "")
 
-    return Output(showScrollViewHeader: showHeader, lossMarginValueString: lossMarginValueString, leverageValueString: leverageValueString)
+    // Network Transforms
+    let currentChange = marketUseCase.getCurrentPrice(symbol: "xbt").asDriverOnErrorJustComplete()
+    
+    // Last Output
+    return Output(showScrollViewHeader: showHeader, lossMarginValueString: lossMarginValueString, leverageValueString: leverageValueString, currentPrice: currentChange)
   }
   
 }
@@ -44,5 +49,6 @@ extension StartPositionViewModel {
     let showScrollViewHeader: Driver<Bool>
     let lossMarginValueString: Driver<String>
     let leverageValueString: Driver<String>
+    public let currentPrice: Driver<PriceChangeModel>
   }
 }
