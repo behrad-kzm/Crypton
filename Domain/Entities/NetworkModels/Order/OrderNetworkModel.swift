@@ -1,13 +1,15 @@
 //
-//  OrderResponseModel.swift
-//  Domain
+// OrderNetworkModel.swift
 //
-//  Created by Behrad Kazemi on 7/25/19.
+//  Created by Behrad Kazemi on 7/20/19.
 //  Copyright © 2019 Behrad Kazemi. All rights reserved.
 //
 
 import Foundation
-public struct OrderResponseModel: Codable {
+
+public enum GetOrderNetworkModel: InteractiveModelType {
+	
+	public struct Response: Codable {
 		
 		public var orderID: String
 		public var clOrdID: String?
@@ -79,4 +81,13 @@ public struct OrderResponseModel: Codable {
 			self.transactTime = transactTime
 			self.timestamp = timestamp
 		}
+	}
+	public struct Request: Codable {
+		public let symbol: String
+		public let side: String
+		public let orderQty: Double
+		public let price: Double
+		public let ordType: OrderType
+	}
 }
+
