@@ -12,8 +12,7 @@ import RxSwift
 public protocol OrderUsecase {
 	func remove(order: CommonOrderProtocol) -> Observable<Void>
 	func getOrder(symbol: String) -> Observable<StopMarketOrder?>
-	func place(stopLimitOrder: StopLimitOrder) -> Observable<Void>
-	func place(stopMarketOrder: StopMarketOrder) -> Observable<Void>
+	func place(order: OrderRequestModel) -> Observable<Void>
 }
 
 

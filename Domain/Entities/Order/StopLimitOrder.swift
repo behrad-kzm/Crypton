@@ -8,6 +8,10 @@
 
 import Foundation
 public struct StopLimitOrder: CommonOrderProtocol {
+	public func asNetwork() -> OrderRequestModel {
+		return OrderRequestModel()
+	}
+	
 	public let  symbol: String
 	
 	public var type: OrderSide

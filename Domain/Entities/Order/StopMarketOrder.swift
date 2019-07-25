@@ -8,6 +8,10 @@
 
 import Foundation
 public struct StopMarketOrder: CommonOrderProtocol {
+	public func asNetwork() -> OrderRequestModel {
+		return OrderRequestModel()
+	}
+	
 	
 	public let symbol: String
 	
@@ -19,3 +23,4 @@ public struct StopMarketOrder: CommonOrderProtocol {
 
 	public let orderID: String
 }
+

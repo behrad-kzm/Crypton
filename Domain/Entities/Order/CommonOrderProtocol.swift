@@ -13,5 +13,7 @@ public protocol CommonOrderProtocol {
 	var symbol: String { get }
 	var targetPrice: Double { get }
 	var orderID: String { get }
+	
+	func asNetwork() -> OrderRequestModel
 	//TODO - OrderID
 }

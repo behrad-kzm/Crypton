@@ -205,12 +205,13 @@ public enum PositionNetworkModel:InteractiveModelType {
 	}
 }
 extension PositionModel {
-	func asNetworkRequestModel() -> PositionNetworkModel.Request{
+	public func asNetworkRequestModel() -> PositionNetworkModel.Request{
 		return PositionNetworkModel.Request(filter:  "{\"symbol\": \(symbol)}", columns: "", count: 1)
 	}
 }
 	extension PositionNetworkModel.Response {
-		func asDomain() -> PositionModel {
-			return PositionModel(symbol: self.symbol, quantity: self.currentQty ?? 0, profitPercent: self.unrealisedPnlPcnt ?? 0, liquid: self.liquidationPrice ?? 0, entry: self.avgEntryPrice ?? 0, leverage: self.leverage ?? 1)
+		public func asDomain() -> PositionModel {
+			let side = (self.liquidationPrice! > self.avgEntryPrice!) ? OrderSide.short : OrderSide.long
+			return PositionModel(symbol: self.symbol, quantity: self.currentQty ?? 0, profitPercent: self.unrealisedPnlPcnt ?? 0, liquid: self.liquidationPrice ?? 0, entry: self.avgEntryPrice ?? 0, leverage: self.leverage ?? 1, side: side )
 		}
 }

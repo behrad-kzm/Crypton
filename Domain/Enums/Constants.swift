@@ -30,8 +30,10 @@ public enum Constants {
 		
 		case defaultBitmexSocket = "wss://www.bitmex.com/realtime"
 		case socketXBT = "?subscribe=instrument:XBTUSD"
+		
 		case defaultBitmexURL = "https://www.bitmex.com"
 		case userModel = "/api/v1/user"
+		case position = "/api/v1/position"
 		case exchangeInfo = "exchangeInfo"
 	}
 }

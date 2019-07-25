@@ -23,10 +23,11 @@ public final class UseCaseProvider: Domain.UseCaseProvider {
   }
 	
 	public func makeControlPanelUseCase() -> Domain.ControlPanelUseCase {
-		return ControlPanelUseCase(manager: self.positionManager)
+//		let market = MarketUseCase(manager: positionManager)
+		return ControlPanelUseCase(manager: positionManager)
 	}
   
   public func makeMarketUseCase() -> Domain.MarketUseCase {
-    return MarketUseCase(manager: self.positionManager)
+    return MarketUseCase(manager: positionManager)
   }
 }

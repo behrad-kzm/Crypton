@@ -7,7 +7,7 @@
 //
 
 import Foundation
-public enum OrderSide: String {
+public enum OrderSide: String, Codable{
 	case long = "Buy"
 	case short = "Sell"
 }

@@ -17,6 +17,7 @@ final class Network<T: Decodable> {
 	private let endPoint: String
 	private let scheduler: ConcurrentDispatchQueueScheduler
 	private let accountInfo: AccountInfoModel
+	private let dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
 	private var sharedHeaders: Dictionary<String,String> {
 		return Dictionary<String,String>()
 	}
@@ -44,7 +45,13 @@ final class Network<T: Decodable> {
 				ResponseAnalytics.printResponseData(status: json.0.statusCode, responseData: json.1)
 				if 200 ... 299 ~= json.0.statusCode{
 					do{
-						return try JSONDecoder().decode([T].self, from: json.1)
+						let data = json.1
+						let decoder = JSONDecoder()
+						let dateFormatter = DateFormatter()
+						dateFormatter.dateFormat = self.dateFormat
+						decoder.dateDecodingStrategy = .formatted(dateFormatter)
+						
+						return try decoder.decode([T].self, from: data)
 					} catch {
 						throw self.handle(error: error, data: json.1, StatusCode: json.0.statusCode)
 					}
@@ -56,7 +63,7 @@ final class Network<T: Decodable> {
 	func getItem(_ path: String, itemId: String = "") -> Observable<T> {
 		let absolutePath = itemId == "" ? endPoint + path : endPoint + "\(path)/\(itemId)"
 		
-		let expires = Int(Date().timeIntervalSince1970) + 200
+		let expires = Int(Date().timeIntervalSince1970) + 30
 		let signature = accountInfo.getSignature(method: "GET", path: path, data: "", expires: expires)
 		let customHeader = [
 			"api-expires" : String(expires),
@@ -75,8 +82,10 @@ final class Network<T: Decodable> {
 					do{
 						let data = json.1
 						let decoder = JSONDecoder()
-						decoder.dateDecodingStrategy = .formatted(Formatter.iso8601)
-						
+						let dateFormatter = DateFormatter()
+						dateFormatter.dateFormat = self.dateFormat
+						decoder.dateDecodingStrategy = .formatted(dateFormatter)
+
 						return try decoder.decode(T.self, from: data)
 						//            return try JSONDecoder().decode(T.self, from: json.1)
 					} catch let err {
