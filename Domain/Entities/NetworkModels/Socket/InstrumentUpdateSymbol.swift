@@ -21,10 +21,4 @@ extension InstrumentUpdateSymbol {
 		public let lastChangePcnt: Double?
 		public let timestamp: String
 	}
-//	public struct Row1: Codable {
-//		public let symbol: String
-//		public let lastPrice: Double
-//		public let lastChangePcnt: Double
-//		public let timestamp: String
-//	}
 }

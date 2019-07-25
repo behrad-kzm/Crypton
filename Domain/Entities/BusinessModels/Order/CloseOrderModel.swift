@@ -7,7 +7,8 @@
 //
 
 import Foundation
-public struct CloseOrder: CommonOrderProtocol {
+
+public struct CloseOrderModel: CommonOrderProtocol {
 	public var type: OrderSide
 	
 	public var quantity: Int

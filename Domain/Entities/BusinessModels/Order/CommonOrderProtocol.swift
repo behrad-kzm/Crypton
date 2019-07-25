@@ -9,11 +9,11 @@
 import Foundation
 public protocol CommonOrderProtocol {
 	var type: OrderSide { get }
-	var quantity: Int { get }
+	var quantity: Int { get }//TODO
 	var symbol: String { get }
 	var targetPrice: Double { get }
 	var orderID: String { get }
 	
 	func asNetwork() -> OrderRequestModel
-	//TODO - OrderID
+
 }

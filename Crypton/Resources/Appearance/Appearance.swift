@@ -10,10 +10,7 @@ import UIKit
 import Foundation
 
 enum Appearance {
-	enum hub {
-		private static let boldFontName = { return "" }	//[TODO]type bold font name here
-		private static let regularFontName = { return " " } //[TODO]type regular font name here
-		
+	enum hub {		
 		enum fonts {
 			static let symbol = { return UIFont.boldSystemFont(ofSize: 21) }
 			static let regular = { return UIFont.systemFont(ofSize: 21) }

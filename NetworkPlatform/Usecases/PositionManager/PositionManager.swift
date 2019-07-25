@@ -56,6 +56,7 @@ public final class PositionManager: Domain.PositionManager {
 		let orderUseCase = OrderUsecase()
 		let positionUsecase = PositionUseCase(network: network, orderUseCase: orderUseCase)
 		let manager = PositionManager(positionUseCase: positionUsecase)
+	
 		return manager
 	}()
 	

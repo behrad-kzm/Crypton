@@ -8,10 +8,10 @@
 
 import Foundation
 import RxSwift
-
+//salar
 public protocol OrderUsecase {
 	func remove(order: CommonOrderProtocol) -> Observable<Void>
-	func getOrder(symbol: String) -> Observable<StopMarketOrder?>
+	func getOrder(symbol: String) -> Observable<OrderResponseModel>
 	func place(order: OrderRequestModel) -> Observable<Void>
 }
 

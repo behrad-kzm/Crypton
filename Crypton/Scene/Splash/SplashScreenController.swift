@@ -20,7 +20,6 @@ class SplashScreenController: UIViewController {
         super.viewDidLoad()
         assert(viewModel != nil)
 
-        //[TODO] do some initial works here before entering the app
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
