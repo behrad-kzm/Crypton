@@ -14,7 +14,7 @@
 
 # Xcode
 xcuserdata/
-project.xcworkspace/
+# project.xcworkspace/
 DerivedData/
 
 # build products
