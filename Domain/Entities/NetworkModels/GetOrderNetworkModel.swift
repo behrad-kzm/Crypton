@@ -16,7 +16,7 @@ public enum GetOrderNetworkModel: InteractiveModelType {
 		public let side: String
 		public let orderQty: Double
 		public let price: Double
-		public let ordType: BitmexOrderType
+		public let ordType: OrderType
 	}
 }
 
