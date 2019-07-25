@@ -12,7 +12,7 @@
 		133435C922E3172200F34553 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133435C822E3172200F34553 /* Account.swift */; };
 		133435CB22E3275100F34553 /* AccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133435CA22E3275100F34553 /* AccountManager.swift */; };
 		133435CD22E32A3900F34553 /* BitmexCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133435CC22E32A3900F34553 /* BitmexCalculator.swift */; };
-		133435CF22E3482E00F34553 /* OrderNetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133435CE22E3482E00F34553 /* OrderNetworkModel.swift */; };
+		133435CF22E3482E00F34553 /* GetOrderNetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133435CE22E3482E00F34553 /* GetOrderNetworkModel.swift */; };
 		133435D122E34B7200F34553 /* BitmexOrderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133435D022E34B7200F34553 /* BitmexOrderType.swift */; };
 		133435D322E37B5E00F34553 /* AccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133435D222E37B5E00F34553 /* AccountManager.swift */; };
 		133435D822E38D2900F34553 /* EasyCrypt+Algorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133435D422E38D2900F34553 /* EasyCrypt+Algorithm.swift */; };
@@ -84,6 +84,14 @@
 		134BC68B228E04E100F74CBB /* InteractiveModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134BC68A228E04E100F74CBB /* InteractiveModelType.swift */; };
 		134BC68E228E06AB00F74CBB /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134BC68D228E06AB00F74CBB /* ViewModelType.swift */; };
 		134BC69F228E153600F74CBB /* Bundle+LoadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134BC69E228E153600F74CBB /* Bundle+LoadView.swift */; };
+		138D388722E9A72B0016ECBD /* CloseOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138D388622E9A72B0016ECBD /* CloseOrder.swift */; };
+		138D388922E9A7620016ECBD /* OrderRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138D388822E9A7620016ECBD /* OrderRequestModel.swift */; };
+		139F722122E8D02800545BD8 /* PositionNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139F722022E8D02800545BD8 /* PositionNetwork.swift */; };
+		139F722322E982FE00545BD8 /* PositionManagerControlInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139F722222E982FE00545BD8 /* PositionManagerControlInfo.swift */; };
+		139F722522E9929000545BD8 /* PositionUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139F722422E9929000545BD8 /* PositionUseCase.swift */; };
+		139F722722E9951B00545BD8 /* MarketOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139F722622E9951A00545BD8 /* MarketOrder.swift */; };
+		139F722922E99A6F00545BD8 /* PostOrderNetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139F722822E99A6F00545BD8 /* PostOrderNetworkModel.swift */; };
+		139F722B22E99E2600545BD8 /* OrderResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139F722A22E99E2600545BD8 /* OrderResponseModel.swift */; };
 		13F97E6822DDBA9600BDC407 /* PositionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F97E6722DDBA9600BDC407 /* PositionManager.swift */; };
 		13F97E6A22DDBAE300BDC407 /* PositionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F97E6922DDBAE300BDC407 /* PositionModel.swift */; };
 		13F97E6C22DDBBC700BDC407 /* StopLossUpdateStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F97E6B22DDBBC700BDC407 /* StopLossUpdateStrategy.swift */; };
@@ -145,7 +153,7 @@
 		133435C822E3172200F34553 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		133435CA22E3275100F34553 /* AccountManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountManager.swift; sourceTree = "<group>"; };
 		133435CC22E32A3900F34553 /* BitmexCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitmexCalculator.swift; sourceTree = "<group>"; };
-		133435CE22E3482E00F34553 /* OrderNetworkModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderNetworkModel.swift; sourceTree = "<group>"; };
+		133435CE22E3482E00F34553 /* GetOrderNetworkModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetOrderNetworkModel.swift; sourceTree = "<group>"; };
 		133435D022E34B7200F34553 /* BitmexOrderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitmexOrderType.swift; sourceTree = "<group>"; };
 		133435D222E37B5E00F34553 /* AccountManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountManager.swift; sourceTree = "<group>"; };
 		133435D422E38D2900F34553 /* EasyCrypt+Algorithm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EasyCrypt+Algorithm.swift"; sourceTree = "<group>"; };
@@ -218,6 +226,14 @@
 		134BC68A228E04E100F74CBB /* InteractiveModelType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractiveModelType.swift; sourceTree = "<group>"; };
 		134BC68D228E06AB00F74CBB /* ViewModelType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		134BC69E228E153600F74CBB /* Bundle+LoadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+LoadView.swift"; sourceTree = "<group>"; };
+		138D388622E9A72B0016ECBD /* CloseOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseOrder.swift; sourceTree = "<group>"; };
+		138D388822E9A7620016ECBD /* OrderRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderRequestModel.swift; sourceTree = "<group>"; };
+		139F722022E8D02800545BD8 /* PositionNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionNetwork.swift; sourceTree = "<group>"; };
+		139F722222E982FE00545BD8 /* PositionManagerControlInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionManagerControlInfo.swift; sourceTree = "<group>"; };
+		139F722422E9929000545BD8 /* PositionUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionUseCase.swift; sourceTree = "<group>"; };
+		139F722622E9951A00545BD8 /* MarketOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketOrder.swift; sourceTree = "<group>"; };
+		139F722822E99A6F00545BD8 /* PostOrderNetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostOrderNetworkModel.swift; sourceTree = "<group>"; };
+		139F722A22E99E2600545BD8 /* OrderResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderResponseModel.swift; sourceTree = "<group>"; };
 		13F97E6722DDBA9600BDC407 /* PositionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionManager.swift; sourceTree = "<group>"; };
 		13F97E6922DDBAE300BDC407 /* PositionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionModel.swift; sourceTree = "<group>"; };
 		13F97E6B22DDBBC700BDC407 /* StopLossUpdateStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopLossUpdateStrategy.swift; sourceTree = "<group>"; };
@@ -283,9 +299,12 @@
 		133435C522E3134E00F34553 /* NetworkModels */ = {
 			isa = PBXGroup;
 			children = (
-				133435CE22E3482E00F34553 /* OrderNetworkModel.swift */,
+				133435CE22E3482E00F34553 /* GetOrderNetworkModel.swift */,
 				133435C622E3136A00F34553 /* PositionNetworkModel.swift */,
 				133435D022E34B7200F34553 /* BitmexOrderType.swift */,
+				139F722822E99A6F00545BD8 /* PostOrderNetworkModel.swift */,
+				139F722A22E99E2600545BD8 /* OrderResponseModel.swift */,
+				138D388822E9A7620016ECBD /* OrderRequestModel.swift */,
 			);
 			path = NetworkModels;
 			sourceTree = "<group>";
@@ -534,6 +553,7 @@
 		134198BC228DDA9D00FF9050 /* APIs */ = {
 			isa = PBXGroup;
 			children = (
+				139F721F22E8CFCF00545BD8 /* Position */,
 				134198D3228DDBEF00FF9050 /* Authorization */,
 			);
 			path = APIs;
@@ -706,10 +726,19 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		139F721F22E8CFCF00545BD8 /* Position */ = {
+			isa = PBXGroup;
+			children = (
+				139F722022E8D02800545BD8 /* PositionNetwork.swift */,
+			);
+			path = Position;
+			sourceTree = "<group>";
+		};
 		13F97E6622DDB9CE00BDC407 /* Position */ = {
 			isa = PBXGroup;
 			children = (
 				13F97E6922DDBAE300BDC407 /* PositionModel.swift */,
+				139F722222E982FE00545BD8 /* PositionManagerControlInfo.swift */,
 			);
 			path = Position;
 			sourceTree = "<group>";
@@ -720,6 +749,8 @@
 				13F97E7522DDBE4A00BDC407 /* StopMarketOrder.swift */,
 				13F97E7722DDC0AD00BDC407 /* StopLimitOrder.swift */,
 				13F97E7922DDC10500BDC407 /* CommonOrderProtocol.swift */,
+				139F722622E9951A00545BD8 /* MarketOrder.swift */,
+				138D388622E9A72B0016ECBD /* CloseOrder.swift */,
 			);
 			path = Order;
 			sourceTree = "<group>";
@@ -780,6 +811,7 @@
 			isa = PBXGroup;
 			children = (
 				9A2BCA6E22E893D40005E17F /* MarketUseCase.swift */,
+				139F722422E9929000545BD8 /* PositionUseCase.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -1094,10 +1126,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				139F722522E9929000545BD8 /* PositionUseCase.swift in Sources */,
 				134198CB228DDB1700FF9050 /* Network.swift in Sources */,
 				134198C5228DDAFC00FF9050 /* ResponseAnalytics.swift in Sources */,
 				1338E35D22E6DDB3008ED63C /* ControlPanelUseCase.swift in Sources */,
 				134198D5228DDBF900FF9050 /* AuthenticationNetwork.swift in Sources */,
+				139F722122E8D02800545BD8 /* PositionNetwork.swift in Sources */,
 				134198C3228DDAFC00FF9050 /* DateFormatterExtension.swift in Sources */,
 				134198C4228DDAFC00FF9050 /* EncodableExtension.swift in Sources */,
 				133435D322E37B5E00F34553 /* AccountManager.swift in Sources */,
@@ -1123,11 +1157,12 @@
 				134198EB228DDF4700FF9050 /* AuthenticationStatus.swift in Sources */,
 				13F97E7C22DDDA4200BDC407 /* PositionManagerStatus.swift in Sources */,
 				13F97E8322DDE30300BDC407 /* MarketUseCase.swift in Sources */,
-				133435CF22E3482E00F34553 /* OrderNetworkModel.swift in Sources */,
+				133435CF22E3482E00F34553 /* GetOrderNetworkModel.swift in Sources */,
 				134198E1228DDF0B00FF9050 /* TokenModel.swift in Sources */,
 				13F97E7822DDC0AD00BDC407 /* StopLimitOrder.swift in Sources */,
 				13F97E8122DDE20A00BDC407 /* PositionUsecases.swift in Sources */,
 				134198DD228DDED700FF9050 /* AuthorizationUseCase.swift in Sources */,
+				139F722B22E99E2600545BD8 /* OrderResponseModel.swift in Sources */,
 				133435C922E3172200F34553 /* Account.swift in Sources */,
 				13F97E6E22DDBC1400BDC407 /* PositionUpdateStrategy.swift in Sources */,
 				13F97E7622DDBE4A00BDC407 /* StopMarketOrder.swift in Sources */,
@@ -1135,13 +1170,18 @@
 				133435C722E3136A00F34553 /* PositionNetworkModel.swift in Sources */,
 				1338E35322E6410F008ED63C /* PriceChangeModel.swift in Sources */,
 				1338E35F22E85620008ED63C /* TickPriceChangeEnum.swift in Sources */,
+				138D388922E9A7620016ECBD /* OrderRequestModel.swift in Sources */,
 				133435D922E38D2900F34553 /* Data+BytesArray.swift in Sources */,
 				133435DB22E38D2900F34553 /* EasyCrypt.swift in Sources */,
+				139F722322E982FE00545BD8 /* PositionManagerControlInfo.swift in Sources */,
 				133435DA22E38D2900F34553 /* String+BytesArray.swift in Sources */,
+				139F722722E9951B00545BD8 /* MarketOrder.swift in Sources */,
 				134198E5228DDF2D00FF9050 /* GenericError.swift in Sources */,
+				138D388722E9A72B0016ECBD /* CloseOrder.swift in Sources */,
 				133435D822E38D2900F34553 /* EasyCrypt+Algorithm.swift in Sources */,
 				134198EA228DDF4700FF9050 /* Constants.swift in Sources */,
 				133435D122E34B7200F34553 /* BitmexOrderType.swift in Sources */,
+				139F722922E99A6F00545BD8 /* PostOrderNetworkModel.swift in Sources */,
 				1338E35522E64177008ED63C /* ChangingType.swift in Sources */,
 				13F97E7E22DDDB0100BDC407 /* OrderUsecase.swift in Sources */,
 				13F97E7422DDBD9700BDC407 /* OrderSide.swift in Sources */,
@@ -1305,13 +1345,13 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = V7HR628783;
+				DEVELOPMENT_TEAM = D7NRM56YK7;
 				INFOPLIST_FILE = Crypton/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.bekapps.Crypton2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bekapps.Crypton;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1325,13 +1365,13 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = V7HR628783;
+				DEVELOPMENT_TEAM = D7NRM56YK7;
 				INFOPLIST_FILE = Crypton/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.bekapps.Crypton2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bekapps.Crypton;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

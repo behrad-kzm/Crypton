@@ -12,19 +12,28 @@ import RxSwift
 
 public struct ControlPanelUseCase: Domain.ControlPanelUseCase {
 
-	private let marketInfo: Domain.MarketUseCase
-	public init (marketInfo: Domain.MarketUseCase) {
-		self.marketInfo = marketInfo
+	private let manager: Domain.PositionManager
+	public init (manager: Domain.PositionManager) {
+		self.manager = manager
 	}
 	
 	public func currentPrice() -> Observable<PriceChangeModel> {
-		return marketInfo.getCurrentPrice(symbol: SymbolType.BTCUSD.rawValue)
+		return manager.currentPrice
 	}
 	
-//	public func panelData() -> Observable<ControlPanelDataModel> {
-//		return nil
-////		return Observable.just(ControlPanelDataModel(currentProfit: <#T##PriceChangeModel#>, side: <#T##OrderSide#>, quantity: <#T##String#>, totalProfit: <#T##PriceChangeModel#>, changeBTC: <#T##PriceChangeModel#>, changeUSD: <#T##PriceChangeModel#>, currentBTC: <#T##Double#>, currentUSD: <#T##Double#>, stopLossTrigger: <#T##Double#>, leverage: <#T##Double#>, isAutoReverse: <#T##Bool#>, isAutoUpdate: <#T##Bool#>, symbol: <#T##String#>))
-//	}
+	public func panelData() -> Observable<ControlPanelDataModel> {
+		let currentStopLoss = manager.stopLossOrderObs.asObservable().filter{$0 != nil}.map{$0!}
+		let currentPositionInfo = manager.currentObs.asObservable().filter{$0 != nil}.map{$0!}
+		let controlInfo = manager.controlInfoObs.asObservable().filter{$0.startedBTCValue > 0}
+		return Observable.combineLatest(currentPositionInfo, controlInfo, currentStopLoss).map({ (position, info, stopLoss) -> ControlPanelDataModel in
+			let totalProfit = PriceChangeModel(price: position.profitPercent, type: ChangingType.representType(double: position.profitPercent))
+			let isAutoReverse = (self.manager.positionUpdatingStrategy == .autoRevert) ? true : false
+			let isAutoUpdate = (self.manager.stopLossUpdatingStrategy == .autoUpdate) ? true : false
+			let changeBTC = PriceChangeModel(price: info.btcChange, type: ChangingType.representType(double: info.btcChange))
+			let changeUSD = PriceChangeModel(price: info.usdChange, type: ChangingType.representType(double: info.usdChange))
+			return ControlPanelDataModel(currentProfit: PriceChangeModel(price: position.profitPercent, type: ChangingType.representType(double: position.profitPercent)), side: position.side, quantity: String(position.quantity), totalProfit: totalProfit, changeBTC: changeBTC, changeUSD: changeUSD, currentBTC: info.currentWalletBTC, currentUSD: info.currentWalletUSD, stopLossTrigger: stopLoss.targetPrice, leverage: position.leverage, isAutoReverse: isAutoReverse, isAutoUpdate: isAutoUpdate, symbol: position.symbol)
+		})
+	}
 	
 	
 }

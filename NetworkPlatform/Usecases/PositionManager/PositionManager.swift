@@ -15,6 +15,10 @@ import RxStarscream
 
 public final class PositionManager: Domain.PositionManager {
 	
+	private var controlInfo = PositionManagerControlInfo(startBTC: -1, startUSD: -1)
+	public var controlInfoObs = BehaviorSubject<PositionManagerControlInfo>(value: PositionManagerControlInfo(startBTC: -1, startUSD: -1))
+	
+	
 	public var current: PositionModel?{
 		didSet {
 			currentObs.onNext(current)
@@ -45,18 +49,24 @@ public final class PositionManager: Domain.PositionManager {
 	public var stopLossOrderObs = BehaviorSubject<StopMarketOrder?>(value: nil)
 	let disposeBag = DisposeBag()
 	var socket: WebSocket
+	let positionUseCase: PositionUseCase
+
 	public static let shared: PositionManager = {
-		let manager = PositionManager()
+		let network = PositionNetwork(network: Network<PositionNetworkModel.Response>(Constants.EndPoints.defaultBitmexURL.rawValue))
+		let orderUseCase = OrderUsecase()
+		let positionUsecase = PositionUseCase(network: network, orderUseCase: orderUseCase)
+		let manager = PositionManager(positionUseCase: positionUsecase)
 		return manager
 	}()
 	
-	private init() {
+	private init(positionUseCase: PositionUseCase) {
 		let socketPath = Constants.EndPoints.defaultBitmexSocket.rawValue + Constants.EndPoints.socketXBT.rawValue
 		socket = WebSocket(url: URL(string: socketPath)!)
 		socket.connect()
 		socket.rx.connected.map { (connected) -> Bool in
 			print("connected:\(connected ? "true" : "false")")
-			return true
+			
+			return connected
 		}.subscribe().disposed(by: disposeBag)
 		let btcINstrumentUpdate = socket.rx.text.flatMapLatest { (mesage) -> Maybe<InstrumentUpdateSymbol> in
 			let result = Maybe<InstrumentUpdateSymbol>.create { maybe in
@@ -77,7 +87,8 @@ public final class PositionManager: Domain.PositionManager {
 
 			return PriceChangeModel(price: row.lastPrice!, type: ChangingType.representType(tick: row.lastTickDirection))
 		}).startWith(PriceChangeModel(price: 0, type: .stable))
-
+		self.positionUseCase = positionUseCase
+		self.startControlPosition()
 	}
 	
 
@@ -102,6 +113,14 @@ public final class PositionManager: Domain.PositionManager {
 		return Observable.just(())
 	}
 	
-	
+	private func updatePositionInfo(){
+		positionUseCase.getPosition(symbol: SymbolType.BTCUSD.rawValue).subscribe(onNext: { (position) in
+			self.current = position
+		}).disposed(by: disposeBag)
+	}
 
+	private func startControlPosition() {
+		updatePositionInfo()
+		
+	}
 }
